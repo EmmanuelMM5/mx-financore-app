@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>MX-FinanCore x LUM - Diagnóstico Progresivo & Granular</title>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-4 md:p-6 font-sans">
+  
+  <!-- Header de Control de Asesor -->
+  <header class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-slate-800 gap-4">
+    <div>
+      <div class="flex items-center gap-2">
+        <h1 class="text-2xl font-bold tracking-tight text-blue-500">MX-FinanCore</h1>
+        <span class="text-xs bg-blue-950 border border-blue-800 text-blue-400 px-2.5 py-0.5 rounded-full font-mono">LUM Financial Suite</span>
+      </div>
+      <p class="text-xs text-slate-400 mt-1">Panel de Diagnóstico Integral • Captura Granular Multiproducto</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="text-right">
+        <p class="text-[10px] text-slate-500">Estatus de Sesión</p>
+        <p class="text-xs font-semibold text-emerald-400 flex items-center gap-1 justify-end">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Diagnóstico Activo
+        </p>
+      </div>
+      <span class="text-xs font-semibold bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300">
+        Asesor: Diego Reyes
+      </span>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
+    
+    <!-- COLUMNA IZQUIERDA: Formulario Progresivo & Granular (7 cols) -->
+    <div class="lg:col-span-7 space-y-6">
+      
+      <!-- PASO 1: PERFIL PRIMARIO DEL CLIENTE (Edad, Ingreso y Régimen) -->
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2.5">
+          <h2 class="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center gap-2">
+            <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-[10px] text-white">1</span>
+            Perfil del Cliente & Capacidad Fiscal Base
+          </h2>
+          <span class="text-[10px] text-blue-400 font-mono">Datos Primarios</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">Edad del Cliente</label>
+            <input type="number" value="35" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white outline-none focus:border-blue-500 font-mono">
+            <span class="text-[9px] text-slate-500 mt-0.5 block">Horizonte a retiro: 30 años</span>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">Ingreso Mensual Neto</label>
+            <div class="relative">
+              <span class="absolute left-2.5 top-2 text-slate-500 font-mono text-xs">$</span>
+              <input type="text" value="75,000" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 pl-6 text-white outline-none focus:border-blue-500 font-mono">
+            </div>
+            <span class="text-[9px] text-slate-500 mt-0.5 block">Ingreso total disponible antes de egresos</span>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">Régimen Fiscal (SAT)</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white outline-none focus:border-blue-500">
+              <option selected>Sueldos y Salarios (Art 151 Deducible)</option>
+              <option>RESICO (Art 185 recomendado)</option>
+              <option>Actividad Empresarial / Honorarios</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">Dependientes Económicos</label>
+            <input type="number" value="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white outline-none focus:border-blue-500 font-mono">
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 2: FOTOGRAFÍA GRANULAR DE ACTIVOS E INVERSIONES -->
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-5">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2.5">
+          <div>
+            <h2 class="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center gap-2">
+              <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-[10px] text-white">2</span>
+              Fotografía Granular de Activos & Inversiones
+            </h2>
+            <p class="text-[10px] text-slate-400 mt-0.5">Captura multicuenta de tasa fija, renta variable y liquidez.</p>
+          </div>
+          <div class="text-right">
+            <span class="text-[9px] text-slate-400 block">Total Activos</span>
+            <span class="text-xs font-bold text-emerald-400 font-mono">$3,100,000 MXN</span>
+          </div>
+        </div>
+
+        <!-- SUBSECCIÓN A: SOFIPOS Y NEOBANCOS (Tasa Fija / Rendimiento) -->
+        <div class="space-y-3 bg-slate-950 p-3.5 rounded-xl border border-slate-800/80">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-xs font-bold text-purple-400 flex items-center gap-1.5">
+                <span>🏦</span> Sofipos & Neobancos (Tasa Fija)
+              </h3>
+              <p class="text-[9px] text-slate-500">Mapeo individual por entidad para monitoreo de tope PROSOFIPO y tasa efectiva</p>
+            </div>
+            <button class="text-[9px] font-semibold text-purple-400 hover:text-purple-300 bg-purple-950/50 border border-purple-800/60 px-2 py-1 rounded-lg transition">
+              + Agregar Sofipo
+            </button>
+          </div>
+
+          <!-- Lista Dinámica de Sofipos -->
+          <div class="space-y-2 text-xs">
+            
+            <!-- Item Sofipo 1 -->
+            <div class="grid grid-cols-12 gap-2 bg-slate-900 p-2.5 rounded-lg border border-slate-800 items-center">
+              <div class="col-span-4">
+                <label class="block text-[8px] text-slate-500 uppercase">Institución / Cuenta</label>
+                <input type="text" value="Nu México (Cajita)" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-purple-500">
+              </div>
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Monto Invertido</label>
+                <div class="relative">
+                  <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-[10px]">$</span>
+                  <input type="text" value="180,000" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 pl-4 text-slate-200 font-mono text-xs outline-none focus:border-purple-500">
+                </div>
+              </div>
+              <div class="col-span-2">
+                <label class="block text-[8px] text-slate-500 uppercase">Tasa Anual</label>
+                <input type="text" value="13.50%" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-purple-300 font-mono text-xs outline-none text-center">
+              </div>
+              <div class="col-span-2 text-right">
+                <span class="text-[8px] text-emerald-400 font-mono block">Protegido</span>
+                <span class="text-[8px] text-slate-400 font-mono">&lt; 25,000 UDIS</span>
+              </div>
+              <div class="col-span-1 text-right">
+                <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+              </div>
+            </div>
+
+            <!-- Item Sofipo 2 -->
+            <div class="grid grid-cols-12 gap-2 bg-slate-900 p-2.5 rounded-lg border border-slate-800 items-center">
+              <div class="col-span-4">
+                <label class="block text-[8px] text-slate-500 uppercase">Institución / Cuenta</label>
+                <input type="text" value="Klar (Cuenta Plazo)" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-purple-500">
+              </div>
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Monto Invertido</label>
+                <div class="relative">
+                  <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-[10px]">$</span>
+                  <input type="text" value="100,000" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 pl-4 text-slate-200 font-mono text-xs outline-none focus:border-purple-500">
+                </div>
+              </div>
+              <div class="col-span-2">
+                <label class="block text-[8px] text-slate-500 uppercase">Tasa Anual</label>
+                <input type="text" value="14.00%" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-purple-300 font-mono text-xs outline-none text-center">
+              </div>
+              <div class="col-span-2 text-right">
+                <span class="text-[8px] text-amber-400 font-mono block">Alerta Riesgo</span>
+                <span class="text-[8px] text-amber-300/80 font-mono">Suma &gt; UDIS</span>
+              </div>
+              <div class="col-span-1 text-right">
+                <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Alerta de Sofipos acumuladas -->
+          <div class="bg-amber-950/30 border border-amber-800/40 p-2 rounded-lg flex items-center justify-between text-[9px] text-amber-300">
+            <div class="flex items-center gap-1.5">
+              <span>⚠️</span>
+              <span><strong>Total Sofipos: $280,000 MXN.</strong> Supera el seguro PROSOFIPO (~$200,000 MXN / 25,000 UDIS global).</span>
+            </div>
+            <span class="font-bold underline cursor-pointer text-[9px]">Reubicar ➔</span>
+          </div>
+        </div>
+
+        <!-- SUBSECCIÓN B: BOLSAS DE INVERSIÓN Y BROKERS (Renta Variable / Trading) -->
+        <div class="space-y-3 bg-slate-950 p-3.5 rounded-xl border border-slate-800/80">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-xs font-bold text-blue-400 flex items-center gap-1.5">
+                <span>📈</span> Casas de Bolsa & Brokerage (GBM, XTB, ARQ)
+              </h3>
+              <p class="text-[9px] text-slate-500">Mapeo de plataformas y perfiles de inversión</p>
+            </div>
+            <button class="text-[9px] font-semibold text-blue-400 hover:text-blue-300 bg-blue-950/50 border border-blue-800/60 px-2 py-1 rounded-lg transition">
+              + Agregar Broker
+            </button>
+          </div>
+
+          <!-- Lista Dinámica de Brokers -->
+          <div class="space-y-2 text-xs">
+            
+            <!-- Item Broker 1 -->
+            <div class="grid grid-cols-12 gap-2 bg-slate-900 p-2.5 rounded-lg border border-slate-800 items-center">
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Plataforma / Broker</label>
+                <input type="text" value="GBM Homebroker" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-blue-500">
+              </div>
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Tipo de Activo</label>
+                <input type="text" value="ETFs (S&P500)" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-slate-400 text-[10px] outline-none">
+              </div>
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Monto Estimado</label>
+                <div class="relative">
+                  <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-[10px]">$</span>
+                  <input type="text" value="150,000" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 pl-4 text-slate-200 font-mono text-xs outline-none focus:border-blue-500">
+                </div>
+              </div>
+              <div class="col-span-2">
+                <label class="block text-[8px] text-slate-500 uppercase">Estrategia</label>
+                <span class="inline-block bg-blue-950 text-blue-300 text-[8px] px-1.5 py-0.5 rounded border border-blue-800 font-mono mt-0.5">Largo Plazo</span>
+              </div>
+              <div class="col-span-1 text-right">
+                <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+              </div>
+            </div>
+
+            <!-- Item Broker 2 -->
+            <div class="grid grid-cols-12 gap-2 bg-slate-900 p-2.5 rounded-lg border border-slate-800 items-center">
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Plataforma / Broker</label>
+                <input type="text" value="XTB / Trading" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-blue-500">
+              </div>
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Tipo de Activo</label>
+                <input type="text" value="CFDs / Divisas" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-slate-400 text-[10px] outline-none">
+              </div>
+              <div class="col-span-3">
+                <label class="block text-[8px] text-slate-500 uppercase">Monto Estimado</label>
+                <div class="relative">
+                  <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-[10px]">$</span>
+                  <input type="text" value="50,000" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 pl-4 text-slate-200 font-mono text-xs outline-none focus:border-blue-500">
+                </div>
+              </div>
+              <div class="col-span-2">
+                <label class="block text-[8px] text-slate-500 uppercase">Estrategia</label>
+                <span class="inline-block bg-amber-950 text-amber-300 text-[8px] px-1.5 py-0.5 rounded border border-amber-800 font-mono mt-0.5">Especulativo</span>
+              </div>
+              <div class="col-span-1 text-right">
+                <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUBSECCIÓN C: LIQUIDEZ Y PATRIMONIO CONSOLIDADO -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          
+          <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 space-y-1">
+            <label class="block text-[10px] font-semibold text-slate-300">Liquidez Banco / Efectivo</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-xs">$</span>
+              <input type="text" value="120,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1 pl-5 text-slate-200 font-mono text-xs">
+            </div>
+            <span class="text-[8px] text-slate-500 block">Nómina / Débito disponible</span>
+          </div>
+
+          <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 space-y-1">
+            <label class="block text-[10px] font-semibold text-slate-300">Bienes Raíces / Inmuebles</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-xs">$</span>
+              <input type="text" value="2,500,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1 pl-5 text-slate-200 font-mono text-xs">
+            </div>
+            <span class="text-[8px] text-slate-500 block">Valor estimado comercial</span>
+          </div>
+
+          <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 space-y-1">
+            <label class="block text-[10px] font-semibold text-slate-300">Planes de Retiro / Vida Activos</label>
+            <div class="relative">
+              <span class="absolute left-2 top-1.5 text-slate-500 font-mono text-xs">$</span>
+              <input type="text" value="50,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1 pl-5 text-slate-200 font-mono text-xs">
+            </div>
+            <span class="text-[8px] text-slate-500 block">Acumulado en PPR / Vida</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PASO 3: PASIVOS DINÁMICOS & EVALUACIÓN DE ACELERACIÓN DE DEUDA -->
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-4">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2.5">
+          <div>
+            <h2 class="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center gap-2">
+              <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-[10px] text-white">3</span>
+              Pasivos Dinámicos & Plazos por Pagar
+            </h2>
+            <p class="text-[9px] text-slate-400 mt-0.5">Captura de créditos para evaluación de liquidación anticipada y arbitrage de tasas.</p>
+          </div>
+          <span class="text-[10px] text-amber-400 font-mono">Análisis Amortización</span>
+        </div>
+
+        <!-- LISTA GRANULAR DE CRÉDITOS Y PASIVOS CON MESES RESTANTES -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <label class="text-[11px] font-semibold text-slate-300">Registro Granular de Deudas y Préstamos</label>
+            <button class="text-[9px] font-semibold text-amber-400 hover:text-amber-300 bg-amber-950/50 border border-amber-800/60 px-2 py-1 rounded-lg transition">
+              + Agregar Préstamo
+            </button>
+          </div>
+
+          <!-- Fila de Encabezados -->
+          <div class="grid grid-cols-12 gap-2 text-[8px] text-slate-500 uppercase px-1 font-bold">
+            <div class="col-span-3">Concepto / Crédito</div>
+            <div class="col-span-2">Pago Mensual</div>
+            <div class="col-span-2">Meses x Pagar</div>
+            <div class="col-span-2">Saldo Insuto / Total</div>
+            <div class="col-span-2 text-center">Tasa Anual / CAT</div>
+            <div class="col-span-1 text-right">Ajuste</div>
+          </div>
+
+          <!-- Crédito 1: Hipotecario -->
+          <div class="grid grid-cols-12 gap-2 bg-slate-950 p-2.5 rounded-xl border border-slate-800 items-center text-xs">
+            <div class="col-span-3">
+              <input type="text" value="Hipoteca BBVA" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-amber-500">
+            </div>
+            <div class="col-span-2">
+              <div class="relative">
+                <span class="absolute left-1.5 top-1.5 text-slate-500 font-mono text-[9px]">$</span>
+                <input type="text" value="18,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 pl-3.5 text-slate-200 font-mono text-xs outline-none">
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="relative">
+                <input type="number" value="180" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 pr-6 text-amber-300 font-mono text-xs outline-none text-center">
+                <span class="absolute right-1.5 top-2 text-slate-500 text-[8px]">meses</span>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <input type="text" value="$1,850,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-400 font-mono text-[10px] outline-none">
+            </div>
+            <div class="col-span-2">
+              <input type="text" value="10.25%" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-300 font-mono text-xs outline-none text-center">
+            </div>
+            <div class="col-span-1 text-right">
+              <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+            </div>
+          </div>
+
+          <!-- Crédito 2: Automotriz -->
+          <div class="grid grid-cols-12 gap-2 bg-slate-950 p-2.5 rounded-xl border border-slate-800 items-center text-xs">
+            <div class="col-span-3">
+              <input type="text" value="Auto Nissan Versa" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-amber-500">
+            </div>
+            <div class="col-span-2">
+              <div class="relative">
+                <span class="absolute left-1.5 top-1.5 text-slate-500 font-mono text-[9px]">$</span>
+                <input type="text" value="5,200" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 pl-3.5 text-slate-200 font-mono text-xs outline-none">
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="relative">
+                <input type="number" value="24" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 pr-6 text-amber-300 font-mono text-xs outline-none text-center">
+                <span class="absolute right-1.5 top-2 text-slate-500 text-[8px]">meses</span>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <input type="text" value="$108,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-400 font-mono text-[10px] outline-none">
+            </div>
+            <div class="col-span-2">
+              <input type="text" value="16.80%" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-amber-400 font-mono text-xs outline-none text-center font-bold">
+            </div>
+            <div class="col-span-1 text-right">
+              <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+            </div>
+          </div>
+
+          <!-- Crédito 3: Tarjeta de Crédito / Préstamo Personal -->
+          <div class="grid grid-cols-12 gap-2 bg-slate-950 p-2.5 rounded-xl border border-slate-800 items-center text-xs">
+            <div class="col-span-3">
+              <input type="text" value="TC Invex (MSI / Liquidad)" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-200 text-xs outline-none focus:border-amber-500">
+            </div>
+            <div class="col-span-2">
+              <div class="relative">
+                <span class="absolute left-1.5 top-1.5 text-slate-500 font-mono text-[9px]">$</span>
+                <input type="text" value="6,500" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 pl-3.5 text-slate-200 font-mono text-xs outline-none">
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="relative">
+                <input type="number" value="8" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 pr-6 text-amber-300 font-mono text-xs outline-none text-center">
+                <span class="absolute right-1.5 top-2 text-slate-500 text-[8px]">meses</span>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <input type="text" value="$45,000" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-400 font-mono text-[10px] outline-none">
+            </div>
+            <div class="col-span-2">
+              <input type="text" value="48.00%" class="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-red-400 font-mono text-xs outline-none text-center font-bold">
+            </div>
+            <div class="col-span-1 text-right">
+              <button class="text-slate-600 hover:text-red-400 text-xs p-1">✕</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BALANCE DE GASTOS Y CAPACIDAD RESIDUAL -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-2 border-t border-slate-800">
+          <div class="space-y-2">
+            <label class="text-[11px] font-semibold text-slate-300 block">Gastos Estilo de Vida</label>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="block text-[8px] text-slate-400 mb-0.5">Fijos (Escuela, Casa)</label>
+                <input type="text" value="$16,000 MXN" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-1.5 text-white font-mono text-xs">
+              </div>
+              <div>
+                <label class="block text-[8px] text-slate-400 mb-0.5">Variables (Ocio)</label>
+                <input type="text" value="$10,000 MXN" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-1.5 text-white font-mono text-xs">
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-emerald-950/30 border border-emerald-800/50 rounded-xl flex flex-col justify-between">
+            <div class="flex justify-between items-start">
+              <span class="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">Capacidad Libre Calculada</span>
+              <span class="text-[8px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-1.5 py-0.5 rounded font-mono">Neto Libre</span>
+            </div>
+            <p class="text-base font-bold text-emerald-300 font-mono">$19,300 MXN / mes</p>
+            <p class="text-[8px] text-slate-400">Ingreso ($75k) - Deudas ($29.7k) - Gastos ($26k)</p>
+          </div>
+        </div>
+
+        <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl transition text-xs shadow-lg shadow-blue-600/20">
+          Ejecutar Diagnóstico y Cargar Estrategias Recomendadas ➔
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: Análisis Multiproducto & Recomendaciones (5 cols) -->
+    <div class="lg:col-span-5 space-y-6">
+      
+      <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 sticky top-6 space-y-5">
+        
+        <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+          <div>
+            <h2 class="text-sm font-semibold text-white">Análisis Técnico y Propuesta</h2>
+            <p class="text-[10px] text-slate-400">Ingreso: $75k • Edad: 35 años • Deuda Total: $2.0M</p>
+          </div>
+          <span class="text-[10px] bg-blue-950 border border-blue-800 text-blue-400 font-mono px-2 py-0.5 rounded">Motor AI</span>
+        </div>
+
+        <!-- Diagnóstico Inmediato -->
+        <div class="space-y-2">
+          <div class="bg-emerald-950/40 border border-emerald-800/60 p-2.5 rounded-xl text-[10px] text-emerald-300 flex items-start gap-2">
+            <span>💡</span>
+            <span><strong>Potencial Fiscal Anual:</strong> Con $75k/mes bajo Sueldos y Salarios, puedes recuperar hasta <strong>+$28,800 MXN</strong> al año en devolución del SAT (Art. 151).</span>
+          </div>
+
+          <!-- Diagnóstico Dinámico de Deudas -->
+          <div class="bg-amber-950/40 border border-amber-800/60 p-2.5 rounded-xl text-[10px] text-amber-300 flex items-start gap-2">
+            <span>⚡</span>
+            <span><strong>Oportunidad Aceleradora de Deuda:</strong> Tienes 24 meses restates del crédito auto (16.8% tasa) y 8 meses de TC. Al usarse instrumentos de liquidez rápida, liberas <strong>$11,700/mes</strong> en flujo de caja antes de tiempo.</span>
+          </div>
+        </div>
+
+        <!-- ESTRATEGIA PRINCIPAL (CORE) -->
+        <div class="bg-slate-950 p-4 rounded-xl border border-blue-500/50 space-y-3 relative">
+          <span class="absolute -top-2.5 right-3 bg-blue-600 text-[9px] font-bold text-white px-2 py-0.5 rounded-full uppercase tracking-wider">
+            Recomendación Core
+          </span>
+
+          <div class="flex items-center gap-2">
+            <span class="text-base">🏆</span>
+            <div>
+              <h3 class="text-xs font-bold text-white">Imagina Ser / OptiMax Premium</h3>
+              <p class="text-[10px] text-blue-400">PPR Art. 151 + Garantía por Invalidez Total</p>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-300 leading-relaxed">
+            De la capacidad libre de $19,300/mes, canalizamos <strong>$8,000 MXN/mes</strong> al PPR. Garantizas tu meta de retiro a los 65 años y proteges el 100% de los ingresos frente a una invalidez total.
+          </p>
+
+          <div class="bg-slate-900 p-2 rounded border border-slate-800 text-[10px] text-slate-300">
+            <strong class="text-emerald-400">Punto de Cierre:</strong> *"Recuperas $28,800 anuales de tus impuestos del SAT, financiando más de 3 mensualidades completas de tu plan de retiro."*
+          </div>
+        </div>
+
+        <!-- ESTRATEGIA SECUNDARIA DE ACELERACIÓN DE DEUDAS (NUEVO) -->
+        <div class="space-y-2.5">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+            Estrategias de Optimización y Pasivos
+          </span>
+
+          <!-- Tarjeta de Arbitraje / Terminación Acelerada de Deuda -->
+          <div class="p-3 bg-slate-950 rounded-xl border border-amber-800/60 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-amber-300 flex items-center gap-1">
+                <span>🎯</span> Estrategia "Bola de Nieve / Arbitraje"
+              </span>
+              <span class="text-[8px] bg-amber-950 text-amber-300 border border-amber-800 px-1.5 py-0.5 rounded font-mono">Préstamos Restantes</span>
+            </div>
+            <p class="text-[10px] text-slate-300 leading-relaxed">
+              Usar el excedente no asegurado de Sofipos ($80k) para <strong>liquidar de golpe la TC Invex (8 meses rest.) y dar un abono a capital al auto</strong>.
+            </p>
+            <div class="bg-slate-900 p-2 rounded border border-slate-800 text-[9px] text-slate-400 space-y-1">
+              <div class="flex justify-between text-slate-200 font-mono">
+                <span>• Meses ahorrados auto:</span>
+                <span class="text-emerald-400 font-bold">14 meses menos</span>
+              </div>
+              <div class="flex justify-between text-slate-200 font-mono">
+                <span>• Intereses no pagados:</span>
+                <span class="text-emerald-400 font-bold">~$18,500 MXN</span>
+              </div>
+              <div class="flex justify-between text-slate-200 font-mono">
+                <span>• Flujo liberado anticipado:</span>
+                <span class="text-emerald-400 font-bold">+$6,500 MXN/mes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-slate-200">OptiMax Patrimonial (Allianz)</span>
+              <span class="text-[9px] bg-slate-900 border border-slate-700 text-slate-400 px-1.5 py-0.5 rounded">Sin Atadura a 65 años</span>
+            </div>
+            <p class="text-[10px] text-slate-400">
+              Si prioriza flexibilidad de liquidez a 10-15 años sobre la deducción fiscal del Art 151.
+            </p>
+          </div>
+        </div>
+
+        <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 rounded-xl transition text-xs shadow-lg shadow-emerald-600/20">
+          Generar Diagnóstico PDF
+        </button>
+
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

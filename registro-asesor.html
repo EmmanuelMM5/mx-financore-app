@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Asesores - MX-FinanCore x LUM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <main class="max-w-lg w-full my-6 space-y-5">
+
+    <!-- CABECERA -->
+    <div class="space-y-1 text-center">
+      <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest font-bold">Red de Especialistas Certificados</span>
+      <h1 class="text-xl font-extrabold text-white tracking-tight">Únete a MX-FinanCore x LUM</h1>
+      <p class="text-xs text-slate-400 max-w-sm mx-auto">
+        Recibe leads pre-calificados con perfil financiero listo y opera con tu propio workbench de consultoría en vivo.
+      </p>
+    </div>
+
+    <!-- FORMULARIO DE ALTA -->
+    <form onsubmit="continuarAPago(event)" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-2xl">
+
+      <!-- Bloque 1: Credenciales -->
+      <div class="space-y-3 border-b border-slate-800 pb-4">
+        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider block font-mono">
+          1. Credenciales & Datos Profesionales
+        </span>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[10px] text-slate-300 font-medium mb-1">Nombre Completo</label>
+            <input type="text" id="asesor-nombre" required placeholder="Lic. Roberto Garza" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-300 font-medium mb-1">Correo Electrónico</label>
+            <input type="email" id="asesor-email" required placeholder="roberto@finanzas.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[10px] text-slate-300 font-medium mb-1">Cédula CNSF / Certificación AMIB</label>
+            <input type="text" id="asesor-cedula" required placeholder="Ej. Cédula CNSF A-12345" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500 transition">
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-300 font-medium mb-1">Años de Experiencia</label>
+            <select id="asesor-experiencia" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+              <option value="1-3">1 a 3 años</option>
+              <option value="3-5" selected>3 a 5 años</option>
+              <option value="5+">Más de 5 años</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque 2: Modelo de Licenciamiento SaaS Exclusivo -->
+      <div class="space-y-3 border-b border-slate-800 pb-4">
+        <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block font-mono">
+          2. Plan Operativo Seleccionado
+        </span>
+
+        <div class="bg-slate-950/80 border border-emerald-500/40 p-3.5 rounded-xl flex items-center justify-between">
+          <div class="space-y-0.5">
+            <span class="text-xs font-bold text-white block">Licenciamiento SaaS Mensual (MX-FinanCore)</span>
+            <span class="text-[10px] text-slate-400 block">Acceso ilimitado al workbench, ruteo de leads y gestión de expedientes.</span>
+          </div>
+          <div class="text-right shrink-0">
+            <span class="text-xs bg-emerald-950 border border-emerald-800 text-emerald-400 px-2.5 py-1 rounded-lg font-mono font-bold block">$799 MXN</span>
+            <span class="text-[9px] text-slate-500 block mt-0.5">Cobro mensual</span>
+          </div>
+        </div>
+        <input type="hidden" id="asesor-modelo" value="saas">
+      </div>
+
+      <!-- BOTÓN DE ENVÍO -->
+      <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 px-4 rounded-xl transition text-xs shadow-lg shadow-emerald-600/20 uppercase tracking-wide flex items-center justify-center gap-2">
+        <span>Continuar al Registro de Método de Pago</span>
+        <span>→</span>
+      </button>
+
+      <p class="text-[9px] text-slate-500 text-center font-mono">
+        🔒 Tus credenciales y transacciones están protegidas bajo estándares de cifrado bancario.
+      </p>
+
+    </form>
+
+  </main>
+
+  <script>
+    function continuarAPago(e) {
+      e.preventDefault();
+
+      const datosAsesor = {
+        nombre: document.getElementById('asesor-nombre').value,
+        email: document.getElementById('asesor-email').value,
+        cedula: document.getElementById('asesor-cedula').value,
+        experiencia: document.getElementById('asesor-experiencia').value,
+        modeloSeleccionado: 'saas',
+        suscripcionMonto: "$799 MXN",
+        estado: 'Pendiente de Pago'
+      };
+
+      // Guardamos la pre-inscripción en el almacenamiento local para enlazarla con la pasarela de pagos
+      localStorage.setItem('asesor_pre_registro', JSON.stringify(datosAsesor));
+
+      // Redirige al flujo de método de pago
+      alert('Datos guardados correctamente. Te redirigiremos a la pasarela segura para configurar tu suscripción de $799 MXN/mes.');
+      window.location.href = 'registro-pago-asesor.html'; 
+    }
+  </script>
+
+</body>
+</html>

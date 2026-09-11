@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta - Mi Expediente Patrimonial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <main class="max-w-md w-full my-8 space-y-6">
+
+    <!-- CABECERA -->
+    <div class="text-center space-y-2">
+      <div class="inline-flex items-center gap-2 bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 px-3 py-1 rounded-full text-[11px] font-mono">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        Estructura de Diagnóstico Lista
+      </div>
+      <h1 class="text-xl font-extrabold text-white tracking-tight">Guarda tu Expediente Patrimonial</h1>
+      <p class="text-xs text-slate-400 max-w-xs mx-auto">
+        Crea tu cuenta para vincular tus resultados, desbloquear los simuladores avanzados y consultar tu estrategia con un asesor.
+      </p>
+    </div>
+
+    <!-- TARJETA DE REGISTRO -->
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5 shadow-2xl relative overflow-hidden">
+      
+      <!-- BOTONES DE SOCIAL LOGIN (RAPIDEZ & FRICCIÓN CERO) -->
+      <div class="space-y-2.5">
+        <button onclick="completarRegistro('Google')" class="w-full bg-slate-950 hover:bg-slate-850 border border-slate-800 text-slate-200 font-semibold py-3 px-4 rounded-xl transition text-xs flex items-center justify-center gap-3">
+          <svg class="w-4 h-4" viewBox="0 0 24 24">
+            <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.2 9 5 12 5z"/>
+            <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/>
+            <path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 10.8 0 12s.7 2.3 1.9 4.7l3.7-2.9z"/>
+            <path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.2-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z"/>
+          </svg>
+          <span>Continuar con Google</span>
+        </button>
+
+        <button onclick="completarRegistro('Apple')" class="w-full bg-slate-950 hover:bg-slate-850 border border-slate-800 text-slate-200 font-semibold py-3 px-4 rounded-xl transition text-xs flex items-center justify-center gap-3">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 170 170">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.13-1.9-14.38-6.08-3.69-3.03-7.6-7.85-11.73-14.46-7.85-12.52-13.84-25.86-17.97-40.02-4.13-14.16-6.2-27.13-6.2-38.92 0-14.43 3.42-26.24 10.26-35.43 6.84-9.19 15.42-13.88 25.74-14.08 4.58 0 9.7 1.15 15.36 3.46 5.66 2.31 9.49 3.52 11.49 3.63 2.59 0 6.64-1.28 12.16-3.85 5.52-2.57 10.4-3.8 14.64-3.7 8.35.42 15.93 3.45 22.75 9.09 6.82 5.64 11.4 12.92 13.74 21.84-11.53 6.95-17.18 16.48-16.96 28.59.22 9.53 3.91 17.51 11.07 23.94 7.16 6.43 15.71 10.15 25.65 11.16-2.29 6.78-5.35 13.58-9.18 20.4zM119.22 31.84c0-7.39 2.65-14.39 7.95-21 5.3-6.61 11.96-10.46 19.98-11.55.54 8.04-2.01 15.19-7.65 21.45-5.64 6.26-12.44 9.87-20.28 10.83-.11-.92-.28-1.83-.28-2.73z"/>
+          </svg>
+          <span>Continuar con Apple</span>
+        </button>
+      </div>
+
+      <div class="flex items-center gap-3 my-2">
+        <div class="h-px bg-slate-800 flex-1"></div>
+        <span class="text-[10px] text-slate-500 font-mono uppercase">O con correo</span>
+        <div class="h-px bg-slate-800 flex-1"></div>
+      </div>
+
+      <!-- FORMULARIO DE CORREO -->
+      <form onsubmit="event.preventDefault(); completarRegistro('Email');" class="space-y-3">
+        <div>
+          <label class="block text-[11px] font-medium text-slate-300 mb-1">Nombre Completo</label>
+          <input type="text" id="input-nombre" required placeholder="Ej. Emmanuel Mendoza" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 transition">
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-medium text-slate-300 mb-1">Correo Electrónico</label>
+          <input type="email" id="input-email" required placeholder="tu.correo@ejemplo.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 transition">
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-medium text-slate-300 mb-1">Contraseña</label>
+          <input type="password" id="input-pass" required placeholder="Mínimo 8 caracteres" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 transition">
+        </div>
+
+        <!-- CLAÚSULAS Y MARCO LEGAL (REQUISITO LFPDPPP) -->
+        <div class="pt-2 space-y-2.5">
+          <label class="flex items-start gap-2.5 cursor-pointer group">
+            <input type="checkbox" id="chk-legal" required class="w-4 h-4 rounded text-emerald-600 bg-slate-950 border-slate-800 focus:ring-0 focus:ring-offset-0 mt-0.5 shrink-0">
+            <span class="text-[10px] text-slate-400 leading-snug group-hover:text-slate-300 transition">
+              Acepto los <a href="#modal-terminos" onclick="abrirModal('modal-terminos')" class="text-emerald-400 underline hover:text-emerald-300">Términos y Condiciones del Servicio</a> y reconozco que las calculadoras presentan estimaciones preliminares.
+            </span>
+          </label>
+
+          <label class="flex items-start gap-2.5 cursor-pointer group">
+            <input type="checkbox" id="chk-privacidad" required class="w-4 h-4 rounded text-emerald-600 bg-slate-950 border-slate-800 focus:ring-0 focus:ring-offset-0 mt-0.5 shrink-0">
+            <span class="text-[10px] text-slate-400 leading-snug group-hover:text-slate-300 transition">
+              He leído el <a href="#modal-privacidad" onclick="abrirModal('modal-privacidad')" class="text-emerald-400 underline hover:text-emerald-300">Aviso de Privacidad</a> conforme a la LFPDPPP para el tratamiento confidencial y cifrado de mis datos financieros patrimoniales.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 px-4 rounded-xl transition text-xs shadow-lg shadow-emerald-600/20 uppercase tracking-wide mt-2">
+          Crear Cuenta y Ver Simuladores →
+        </button>
+      </form>
+
+    </div>
+
+    <!-- PIE LEGAL DISCRETO -->
+    <div class="text-center space-y-1 text-[10px] text-slate-500 font-mono">
+      <p>🔒 Datos protegidos bajo cifrado SSL/TLS de grado bancario.</p>
+      <p>Consultoría formal ejecutada por Asesores Certificados (AMIB / CNSF).</p>
+    </div>
+
+  </main>
+
+  <!-- ==================== MODAL 1: AVISO DE PRIVACIDAD (LFPDPPP) ==================== -->
+  <div id="modal-privacidad" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 max-w-lg w-full rounded-2xl p-6 space-y-4 max-h-[80vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-sm font-bold text-white">Aviso de Privacidad Integral</h3>
+        <button onclick="cerrarModal('modal-privacidad')" class="text-slate-400 hover:text-white text-xs">✕ Cerrar</button>
+      </div>
+      <div class="text-[11px] text-slate-300 space-y-3 leading-relaxed">
+        <p><strong>Responsable del Tratamiento:</strong> La entidad operadora de esta plataforma reconoce la importancia del tratamiento legítimo, controlado e informado de sus datos personales, en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).</p>
+        <p><strong>Finalidades Primarias:</strong></p>
+        <ul class="list-disc pl-4 space-y-1">
+          <li>Procesar el diagnóstico y score patrimonial calculado en los simuladores.</li>
+          <li>Generar su expediente patrimonial digital dentro del Hub.</li>
+          <li>Asignar y coordinar la atención personalizada de un Asesor Financiero/Patrimonial certificado (AMIB / CNSF).</li>
+        </ul>
+        <p><strong>Protección y Cifrado:</strong> Toda la información financiera (ingresos proyectados, régimen fiscal y deducciones) se procesa bajo protocolos de cifrado seguro y no es vendida ni transferida a terceros ajenos a la prestación del servicio de consultoría.</p>
+        <p><strong>Derechos ARCO:</strong> Usted puede ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición (ARCO) enviando una solicitud a nuestro departamento de datos personales.</p>
+      </div>
+      <button onclick="cerrarModal('modal-privacidad')" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs py-2 rounded-xl">Entendido</button>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: TÉRMINOS Y CONDICIONES ==================== -->
+  <div id="modal-terminos" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 max-w-lg w-full rounded-2xl p-6 space-y-4 max-h-[80vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <h3 class="text-sm font-bold text-white">Términos y Condiciones de Uso</h3>
+        <button onclick="cerrarModal('modal-terminos')" class="text-slate-400 hover:text-white text-xs">✕ Cerrar</button>
+      </div>
+      <div class="text-[11px] text-slate-300 space-y-3 leading-relaxed">
+        <p><strong>1. Alcance de las Calculadoras y Simulaciones:</strong> Las herramientas disponibles en esta plataforma (Calculadora PPR, Interés Compuesto, Semáforo Estratégico, etc.) son instrumentos de carácter **educativo e informativo**. Los rendimientos, montos de devolución fiscal del SAT y coberturas proyectadas constituyen estimaciones con base en la legislación aplicable (Art. 151 LISR) e históricos de mercado, sin garantizar resultados futuros.</p>
+        <p><strong>2. Intervención de Asesor Financiero:</strong> La contratación formal de cualquier producto financiero, seguro o plan de retiro se formaliza exclusivamente mediante la asesoría, dictamen y validación de un Asesor Financiero con cédula vigente ante las autoridades competentes (AMIB / CNSF).</p>
+        <p><strong>3. Uso de la Plataforma:</strong> El usuario se compromete a proporcionar datos veraces para el correcto funcionamiento del modelo de recomendación algorítmica.</p>
+      </div>
+      <button onclick="cerrarModal('modal-terminos')" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs py-2 rounded-xl">Entendido</button>
+    </div>
+  </div>
+
+  <!-- LÓGICA JS DE VINCULACIÓN Y MODALES -->
+  <script>
+    function abrirModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function cerrarModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function completarRegistro(metodo) {
+      // Recupera el contexto guardado en localStorage desde index-v1.html
+      const datosDiag = localStorage.getItem('diagnostico_anonimo');
+      
+      if (datosDiag) {
+        console.log("Asignando diagnóstico anónimo al usuario registrado mediante:", metodo);
+        // Aquí se hace el llamado API a tu backend para guardar el expediente
+      }
+
+      // Redirige al Dashboard de la Web App
+      window.location.href = 'dashboard-app.html';
+    }
+  </script>
+
+</body>
+</html>
