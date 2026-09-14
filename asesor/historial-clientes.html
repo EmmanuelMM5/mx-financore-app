@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>MX-FinanCore x LUM - Historial y Cierre de Clientes</title>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen p-4 md:p-6 font-sans">
+  
+  <!-- Header de Control de Asesor -->
+  <header class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-slate-200 gap-4">
+    <div>
+      <div class="flex items-center gap-2">
+        <h1 class="text-2xl font-bold tracking-tight text-blue-600">MX-FinanCore</h1>
+        <span class="text-xs bg-blue-50 border border-blue-200 text-blue-700 px-2.5 py-0.5 rounded-full font-mono">LUM Financial Suite</span>
+      </div>
+      <p class="text-xs text-slate-500 mt-1">Panel de Asesor • Historial de Clientes & Control de Cierres</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <!-- Navegación Rápida entre Vistas -->
+      <nav class="hidden md:flex items-center gap-1 bg-white border border-slate-200 rounded-lg p-1 shadow-xs text-xs">
+        <a href="agenda-asesor.html" class="px-3 py-1.5 rounded text-slate-600 hover:text-slate-900 transition">Agenda & Citas</a>
+        <a href="workbench.html" class="px-3 py-1.5 rounded text-slate-600 hover:text-slate-900 transition">Workbench Activo</a>
+        <a href="#" class="px-3 py-1.5 rounded bg-blue-50 text-blue-700 font-semibold">Historial Clientes</a>
+      </nav>
+      <span class="text-xs font-semibold bg-white border border-slate-200 shadow-sm px-3 py-1.5 rounded-lg text-slate-700">
+        Asesor: Diego Reyes
+      </span>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto space-y-6 mt-8">
+    
+    <!-- BARRA DE ACCESOS Y FILTROS RÁPIDOS -->
+    <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="w-full md:w-1/3">
+        <input type="text" placeholder="Buscar por nombre de cliente o producto..." class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs text-slate-800 outline-none focus:border-blue-500">
+      </div>
+      <div class="flex items-center gap-2 w-full md:w-auto justify-end">
+        <select class="bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs text-slate-700 outline-none">
+          <option>Todos los Estatus</option>
+          <option>Cierre Exitoso</option>
+          <option>En Seguimiento</option>
+          <option>Propuesta Enviada</option>
+        </select>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2 px-4 rounded-lg transition shadow-xs">
+          + Nuevo Registro
+        </button>
+      </div>
+    </div>
+
+    <!-- TABLA DE HISTORIAL DE CLIENTES (LIGHTWEIGHT CRM) -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+        <h2 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Expedientes y Seguimiento Comercial</h2>
+        <span class="text-[10px] text-slate-500 font-mono">Mostrando registros recientes</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-[10px] text-slate-400 uppercase font-bold">
+              <th class="p-3">Cliente / Contacto</th>
+              <th class="p-3">Última Sesión</th>
+              <th class="p-3">Estrategia / Producto Cotizado</th>
+              <th class="p-3">Capacidad / Monto</th>
+              <th class="p-3">Estatus Comercial</th>
+              <th class="p-3 text-right">Acciones Rápidas</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            
+            <!-- Fila 1 -->
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-3 font-semibold text-slate-900">
+                Carlos Mendoza Ruiz
+                <span class="block text-[10px] font-normal text-slate-400 font-mono">carlos.mendoza@email.com</span>
+              </td>
+              <td class="p-3 text-slate-500">Ayer, 05:00 PM</td>
+              <td class="p-3">
+                <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded text-[10px] font-medium">PPR Art. 151 (Imagina Ser)</span>
+              </td>
+              <td class="p-3 font-mono text-emerald-700 font-semibold">$8,000 / mes</td>
+              <td class="p-3">
+                <select class="bg-emerald-50 text-emerald-800 border border-emerald-200 rounded p-1 text-[11px] font-medium outline-none">
+                  <option selected>Cierre Exitoso ✓</option>
+                  <option>Propuesta Enviada</option>
+                  <option>En Seguimiento</option>
+                  <option>Perdido</option>
+                </select>
+              </td>
+              <td class="p-3 text-right space-x-2">
+                <button class="text-slate-500 hover:text-blue-600 font-medium text-[11px] bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded transition" title="Copiar resumen para portapapeles">
+                  📋 Copiar Resumen
+                </button>
+                <button class="text-blue-600 hover:text-blue-700 font-medium text-[11px] bg-blue-50 hover:bg-blue-100 px-2 py-1 rounded transition">
+                  📄 Ver PDF
+                </button>
+              </td>
+            </tr>
+
+            <!-- Fila 2 -->
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-3 font-semibold text-slate-900">
+                Ana Sofía Garza
+                <span class="block text-[10px] font-normal text-slate-400 font-mono">asofia.garza@email.com</span>
+              </td>
+              <td class="p-3 text-slate-500">10 Sep, 2026</td>
+              <td class="p-3">
+                <span class="bg-purple-50 text-purple-700 border border-purple-200 px-2 py-0.5 rounded text-[10px] font-medium">OptiMax Patrimonial</span>
+              </td>
+              <td class="p-3 font-mono text-emerald-700 font-semibold">$6,000 / mes</td>
+              <td class="p-3">
+                <select class="bg-amber-50 text-amber-800 border border-amber-200 rounded p-1 text-[11px] font-medium outline-none">
+                  <option>Cierre Exitoso ✓</option>
+                  <option selected>Propuesta Enviada</option>
+                  <option>En Seguimiento</option>
+                  <option>Perdido</option>
+                </select>
+              </td>
+              <td class="p-3 text-right space-x-2">
+                <button class="text-slate-500 hover:text-blue-600 font-medium text-[11px] bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded transition">
+                  📋 Copiar Resumen
+                </button>
+                <button class="text-blue-600 hover:text-blue-700 font-medium text-[11px] bg-blue-50 hover:bg-blue-100 px-2 py-1 rounded transition">
+                  📄 Ver PDF
+                </button>
+              </td>
+            </tr>
+
+            <!-- Fila 3 -->
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-3 font-semibold text-slate-900">
+                Roberto Valdés Limón
+                <span class="block text-[10px] font-normal text-slate-400 font-mono">rvaldes@email.com</span>
+              </td>
+              <td class="p-3 text-slate-500">08 Sep, 2026</td>
+              <td class="p-3">
+                <span class="bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded text-[10px] font-medium">Reestructuración de Deudas</span>
+              </td>
+              <td class="p-3 font-mono text-emerald-700 font-semibold">N/A (Arbitraje)</td>
+              <td class="p-3">
+                <select class="bg-blue-50 text-blue-800 border border-blue-200 rounded p-1 text-[11px] font-medium outline-none">
+                  <option>Cierre Exitoso ✓</option>
+                  <option>Propuesta Enviada</option>
+                  <option selected>En Seguimiento</option>
+                  <option>Perdido</option>
+                </select>
+              </td>
+              <td class="p-3 text-right space-x-2">
+                <button class="text-slate-500 hover:text-blue-600 font-medium text-[11px] bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded transition">
+                  📋 Copiar Resumen
+                </button>
+                <button class="text-blue-600 hover:text-blue-700 font-medium text-[11px] bg-blue-50 hover:bg-blue-100 px-2 py-1 rounded transition">
+                  📄 Ver PDF
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pie de Tabla / Exportación -->
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
+        <span class="text-slate-500">Mostrando 3 de 12 registros totales este mes.</span>
+        <button class="bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 font-semibold py-2 px-4 rounded-lg transition shadow-xs">
+          📥 Exportar Historial Completo a Excel / CSV
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+</body>
+</html>

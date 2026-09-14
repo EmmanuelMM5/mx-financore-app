@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Citas & Agenda - MX-FinanCore Asesor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- Header del Panel -->
+  <header class="bg-slate-900 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <span class="bg-emerald-600 text-white font-bold px-3 py-1 rounded text-sm">MX-FinanCore</span>
+        <h1 class="text-lg font-semibold">Panel del Asesor Certificado</h1>
+      </div>
+      <div class="flex items-center space-x-4 text-sm">
+        <span class="text-emerald-400 font-medium">● Licencia Activa ($799/mes)</span>
+        <span class="text-slate-300">Cédula CNSF/AMIB: #482910</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    
+    <!-- Resumen de Estadísticas Rápidas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+        <p class="text-xs font-semibold text-slate-500 uppercase">Citas Agendadas (Hoy)</p>
+        <p class="text-3xl font-bold text-slate-900 mt-2">3</p>
+        <p class="text-xs text-emerald-600 mt-1">↑ Sincronizado con Google Calendar</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+        <p class="text-xs font-semibold text-slate-500 uppercase">Leads Calificados Asignados</p>
+        <p class="text-3xl font-bold text-slate-900 mt-2">12</p>
+        <p class="text-xs text-slate-500 mt-1">Listos para contacto o cierre</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+        <p class="text-xs font-semibold text-slate-500 uppercase">Tasa de Conversión</p>
+        <p class="text-3xl font-bold text-emerald-600 mt-2">24.5%</p>
+        <p class="text-xs text-slate-500 mt-1">Promedio del mes en curso</p>
+      </div>
+    </div>
+
+    <!-- Sección de Próximas Citas y Fichas de Leads -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Columna Izquierda: Agenda del Día -->
+      <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center justify-between">
+          <span>Próximas Consultorías 1:1</span>
+          <span class="text-xs font-normal text-slate-500">Google Meet Integrado</span>
+        </h2>
+
+        <div class="space-y-4">
+          <!-- Tarjeta de Cita 1 -->
+          <div class="border border-slate-200 rounded-lg p-4 hover:border-emerald-500 transition-colors">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-0.5 rounded">Hoy, 05:00 PM</span>
+                <h3 class="font-bold text-slate-900 mt-1">Carlos Mendoza Ruiz</h3>
+                <p class="text-xs text-slate-600">Interés: Plan Personal de Retiro (PPR) + Optimización SAT</p>
+              </div>
+              <a href="https://meet.google.com" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors">
+                Entrar a Meet
+              </a>
+            </div>
+            <!-- Ficha técnica rápida generada por el Hub -->
+            <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-3 gap-2 text-xs text-slate-700">
+              <div><span class="text-slate-400 block">Edad:</span> 34 años</div>
+              <div><span class="text-slate-400 block">Ahorro Mensual:</span> $4,500 MXN</div>
+              <div><span class="text-slate-400 block">Potencial Devolución:</span> ~$19,200 MXN</div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Cita 2 -->
+          <div class="border border-slate-200 rounded-lg p-4 hover:border-emerald-500 transition-colors">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-2.5 py-0.5 rounded">Mañana, 10:00 AM</span>
+                <h3 class="font-bold text-slate-900 mt-1">Ana Sofía Garza</h3>
+                <p class="text-xs text-slate-600">Interés: Consolidación de Deudas y Fondo Universitario</p>
+              </div>
+              <a href="https://meet.google.com" target="_blank" class="bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors">
+                Ver Detalles
+              </a>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-3 gap-2 text-xs text-slate-700">
+              <div><span class="text-slate-400 block">Edad:</span> 29 años</div>
+              <div><span class="text-slate-400 block">Ahorro Mensual:</span> $6,000 MXN</div>
+              <div><span class="text-slate-400 block">Potencial Devolución:</span> ~$24,000 MXN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Configuración de Disponibilidad & Sincronización -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h2 class="text-base font-bold text-slate-900 mb-4">Sincronización de Agenda</h2>
+        <p class="text-xs text-slate-600 mb-4">Tus bloques de atención están vinculados directamente al calendario principal de tu equipo.</p>
+        
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-100 text-xs">
+            <span class="font-medium text-slate-700">Google Calendar</span>
+            <span class="text-emerald-600 font-bold">Conectado ✓</span>
+          </div>
+          <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-100 text-xs">
+            <span class="font-medium text-slate-700">Generación Automática Meet</span>
+            <span class="text-emerald-600 font-bold">Activo ✓</span>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-4">
+          <h3 class="text-xs font-bold text-slate-900 uppercase mb-2">Acciones Rápidas</h3>
+          <button class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold py-2.5 px-4 rounded-lg transition-colors mb-2">
+            Modificar Horarios de Atención
+          </button>
+          <button class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold py-2.5 px-4 rounded-lg transition-colors">
+            Abrir Workbench MX-FinanCore
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
