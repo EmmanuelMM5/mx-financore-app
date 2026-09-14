@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/mx-financore-app/cliente/">
   <title>Calibración de Perfil - Mi Expediente Patrimonial</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -94,11 +95,11 @@
         fechaCalibracion: new Date().toISOString()
       };
 
-      // Guarda solo los datos esenciales en el almacenamiento local
+      // Guarda los datos esenciales en el almacenamiento local del navegador
       localStorage.setItem('perfil_calibrado_usuario', JSON.stringify(perfilCalibrado));
 
-      // Redirige al Dashboard interactivo
-      window.location.href = 'dashboard-app.html';
+      // Redirige al Dashboard utilizando la ruta absoluta correcta en GitHub Pages
+      window.location.href = '/mx-financore-app/cliente/dashboard-app.html';
     }
   </script>
 
