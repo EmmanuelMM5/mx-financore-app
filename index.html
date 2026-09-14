@@ -1,226 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico Patrimonial y Financiero</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Auditoría & Estrategia Patrimonial - Diagnóstico Exprés</title>
 </head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen p-4 sm:p-6">
 
-<body class="bg-slate-50 text-slate-800 min-h-screen p-4 md:p-6 font-sans">
+  <main class="max-w-2xl mx-auto space-y-6">
 
-  <!-- CABECERA ENFOCADA EN ESTRATEGIA -->
-  <header class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-slate-200 gap-4">
-    <div class="space-y-1">
-      <div class="flex items-center gap-2">
-        <span class="text-xs bg-blue-50 border border-blue-200 text-blue-700 font-bold px-2.5 py-0.5 rounded-full font-mono uppercase tracking-wider">
-          ⚡ Auditoría de Estrategia Patrimonial
-        </span>
+    <!-- HEADER DE MARCA: MX FinanCore (Ubicado en la parte más alta) -->
+    <header class="flex items-center justify-between px-2">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-sm shadow-sm">
+          MX
+        </div>
+        <div>
+          <span class="text-sm font-extrabold tracking-tight text-slate-900">MX FinanCore</span>
+          <span class="block text-[10px] font-medium uppercase tracking-wider text-slate-400">Arquitectura Patrimonial</span>
+        </div>
       </div>
-      <h1 class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-900 mt-1">
-        Diseña una Estrategia Financiera Eficiente y Maximiza tu Beneficio Fiscal
-      </h1>
-      <p class="text-xs md:text-sm text-slate-500">
-        Evalúa en 30 segundos la arquitectura de tus activos, pasivos y deducciones del SAT para detectar oportunidades de optimización.
-      </p>
-    </div>
-
-    <div class="flex items-center gap-2 shrink-0">
-      <span class="text-xs font-semibold bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-xs">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        🔒 Diagnóstico Anónimo • Sin datos bancarios ni RFC
-      </span>
-    </div>
-  </header>
-
-  <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
-
-    <!-- COLUMNA IZQUIERDA: Aquí vive el SEMÁFORO FIJO ARRIBA, seguido de las preguntas -->
-    <div class="lg:col-span-6 space-y-6">
-      
-      <!-- 1. SEMÁFORO FIJO EN LA PARTE SUPERIOR DE ESTA COLUMNA -->
-      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-6 space-y-3 z-10">
-        <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-          <h2 class="text-sm font-semibold text-slate-900">Dictamen Preliminar de Estrategia</h2>
-          <span class="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 font-bold px-2 py-0.5 rounded">Matriz de Evaluación</span>
+      <span class="text-[10px] font-semibold px-2.5 py-1 bg-slate-200/70 text-slate-600 rounded-full">v1.0 Pro</span>
+    </header>
+    
+    <!-- TARJETA DEL SEMÁFORO / SCORE (FIJA / STICKY DURANTE EL SCROLL) -->
+    <div class="sticky top-4 z-50">
+      <div id="contenedor-semaforo" class="p-5 rounded-2xl border shadow-lg backdrop-blur-md bg-red-50/95 border-red-200 space-y-4 transition-all duration-300">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span id="badge-color-semaforo" class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
+            <span id="texto-estado-semaforo" class="text-xs font-bold uppercase tracking-wider text-red-700">Estructura Vulnerable: Fuga de Capital</span>
+          </div>
+          <span id="score-porcentaje" class="text-2xl font-black text-slate-800">12%</span>
         </div>
 
-        <div id="contenedor-semaforo" class="p-4 rounded-xl border transition-all duration-300 space-y-3">
-          <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <span id="badge-color-semaforo" class="w-3 h-3 rounded-full animate-ping"></span>
-              <span id="texto-estado-semaforo" class="text-xs font-bold uppercase tracking-wider">Calculando...</span>
-            </div>
-            <span id="score-porcentaje" class="text-xs font-mono font-bold">0%</span>
-          </div>
+        <!-- Barra de Progreso -->
+        <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+          <div id="barra-progreso" class="h-full transition-all duration-500 rounded-full bg-red-500" style="width: 12%;"></div>
+        </div>
 
-          <!-- Barra de Progreso Visual -->
-          <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200">
-            <div id="barra-progreso" class="h-full transition-all duration-500 rounded-full w-0"></div>
-          </div>
-          <p id="subtexto-semaforo" class="text-[11px] text-slate-600 mt-1 leading-snug"></p>
+        <p id="subtexto-semaforo" class="text-xs text-slate-600 leading-relaxed">
+          Atención crítica: Tu esquema actual presenta vulnerabilidades importantes frente a la inflación y costos financieros elevados.
+        </p>
+      </div>
+    </div>
+
+    <!-- DICTAMEN PRELIMINAR (FORMULARIO DE OPCIONES) -->
+    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 gap-2">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">Dictamen Preliminar</h2>
+          <!-- SELLO DE CONFIANZA Y TRANSPARENCIA -->
+          <p class="text-xs text-slate-500 flex items-center gap-1.5 mt-1">
+            <span>🔒</span> Calcula tu salud financiera en segundos. Tus respuestas son confidenciales y seguras.
+          </p>
         </div>
       </div>
 
-      <!-- 2. BLOQUE DE PREGUNTAS DEL FORMULARIO (DEBAJO DEL SEMÁFORO EN LA MISMA COLUMNA) -->
-      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-
-        <!-- Bloque 1: Estrategia de Activos -->
-        <div class="space-y-3">
-          <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-            <h2 class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-2">
-              <span class="flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-[10px] text-white">1</span>
-              Estrategia Actual de Acumulación y Liquidez
-            </h2>
-          </div>
-          <div class="grid grid-cols-1 gap-2 text-xs">
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-banco" checked class="diag-chk w-4 h-4 rounded text-blue-600 bg-white border-slate-300">
-                🏦 Capital Estancado en Banco Tradicional / Débito
-              </span>
-              <span class="text-[9px] text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono">Sin Rendimiento</span>
-            </label>
-
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-neobanco" class="diag-chk w-4 h-4 rounded text-blue-600 bg-white border-slate-300">
-                📱 Capital en Neobancos / Sofipos (ej. Nu, Klar, Stori)
-              </span>
-              <span class="text-[9px] text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200 font-mono">Tasa Fija</span>
-            </label>
-
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-cetes" class="diag-chk w-4 h-4 rounded text-blue-600 bg-white border-slate-300">
-                📈 Portafolio de Inversión Activo (Cetes / Bolsa / Fondos)
-              </span>
-              <span class="text-[9px] text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 font-mono">Protección Inflación</span>
-            </label>
-          </div>
+      <!-- SECCIÓN 1: ACUMULACIÓN Y LIQUIDEZ -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">1</span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Estrategia Actual de Acumulación y Liquidez</h3>
         </div>
 
-        <!-- Bloque 2: Estrategia Fiscal y Protección -->
-        <div class="space-y-3">
-          <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-            <h2 class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-2">
-              <span class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-600 text-[10px] text-white">2</span>
-              Estrategia Fiscal SAT & Blindaje Patrimonial
-            </h2>
+        <!-- Opción Banco (Marcada por defecto) -->
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all bg-slate-50/50">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-banco" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500" checked>
+            <span class="text-sm font-medium text-slate-700">🏦 Capital Estancado en Banco Tradicional / Débito</span>
           </div>
-          <div class="grid grid-cols-1 gap-2 text-xs">
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-deducible" checked class="diag-chk w-4 h-4 rounded text-emerald-600 bg-white border-slate-300">
-                1. Estrategia de inversión deducible de impuestos <span class="text-slate-500 font-normal">(ej. PPR Art. 151 LISR)</span>
-              </span>
-              <span class="text-[9px] text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono">Deducción SAT</span>
-            </label>
+          <span class="text-[10px] font-semibold px-2 py-1 bg-slate-200 text-slate-600 rounded-md">Sin Rendimiento</span>
+        </label>
 
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-exento" class="diag-chk w-4 h-4 rounded text-emerald-600 bg-white border-slate-300">
-                2. Estrategia de inversión exento de impuestos <span class="text-slate-500 font-normal">(ej. Art. 93 LISR / Dotal)</span>
-              </span>
-              <span class="text-[9px] text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono">Exención Fiscal</span>
-            </label>
-
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-patrimonial" class="diag-chk w-4 h-4 rounded text-emerald-600 bg-white border-slate-300">
-                3. Plan patrimonial <span class="text-slate-500 font-normal">(ej. Blindaje con invalidez y fallecimiento)</span>
-              </span>
-              <span class="text-[9px] text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono">Protección Total</span>
-            </label>
+        <!-- Opción Neobancos -->
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-neobanco" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+            <span class="text-sm font-medium text-slate-700">📱 Capital en Neobancos / Sofipos (ej. Nu, Klar, Stori)</span>
           </div>
+          <span class="text-[10px] font-semibold px-2 py-1 bg-purple-100 text-purple-700 rounded-md">Tasa Fija</span>
+        </label>
+
+        <!-- Opción Cetes -->
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-cetes" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+            <span class="text-sm font-medium text-slate-700">📈 Portafolio de Inversión Activo (Cetes / Bolsa / Fondos)</span>
+          </div>
+          <span class="text-[10px] font-semibold px-2 py-1 bg-emerald-100 text-emerald-700 rounded-md">Protección Inflación</span>
+        </label>
+      </div>
+
+      <!-- SECCIÓN 2: FISCAL Y BLINDAJE PATRIMONIAL -->
+      <div class="space-y-4 pt-2">
+        <div class="flex items-center gap-2">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">2</span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Estrategia Fiscal SAT & Blindaje Patrimonial</h3>
         </div>
 
-        <!-- Bloque 3: Pasivos / Fugas -->
-        <div class="space-y-3">
-          <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-            <h2 class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-2">
-              <span class="flex h-5 w-5 items-center justify-center rounded-full bg-amber-600 text-[10px] text-white">3</span>
-              Gestión de Pasivos y Compromisos Financieros
-            </h2>
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-deducible" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+            <span class="text-sm font-medium text-slate-700">1. Estrategia de inversión deducible <span class="text-xs text-slate-400">(ej. PPR Art. 151)</span></span>
           </div>
-          <div class="grid grid-cols-1 gap-2 text-xs">
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-250 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-deuda-hipoteca" class="diag-chk w-4 h-4 rounded text-amber-500 bg-white border-slate-300">
-                🏠 Crédito Hipotecario Vigente (Bancario / Cofinavit)
-              </span>
-              <span class="text-[9px] text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-mono">Pasivo a Largo Plazo</span>
-            </label>
+          <span class="text-[10px] font-semibold px-2 py-1 bg-blue-100 text-blue-700 rounded-md">Deducción SAT</span>
+        </label>
 
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-deuda-auto" class="diag-chk w-4 h-4 rounded text-amber-500 bg-white border-slate-300">
-                🚗 Crédito Automotriz o Préstamo Personal
-              </span>
-              <span class="text-[9px] text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-mono">Estructura Fija</span>
-            </label>
-
-            <label class="flex items-center justify-between p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-slate-300 transition">
-              <span class="flex items-center gap-2 font-medium text-slate-800">
-                <input type="checkbox" id="chk-deuda-tc" class="diag-chk w-4 h-4 rounded text-amber-500 bg-white border-slate-300">
-                💳 Saldo Revolvente en Tarjetas de Crédito
-              </span>
-              <span class="text-[9px] text-red-700 bg-red-50 px-2 py-0.5 rounded border border-red-200 font-mono">Fuga por Interés</span>
-            </label>
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-exento" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+            <span class="text-sm font-medium text-slate-700">2. Estrategia exenta de impuestos <span class="text-xs text-slate-400">(ej. Art. 93 LISR)</span></span>
           </div>
+          <span class="text-[10px] font-semibold px-2 py-1 bg-emerald-100 text-emerald-700 rounded-md">Exención LISR</span>
+        </label>
+
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-patrimonial" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+            <span class="text-sm font-medium text-slate-700">3. Plan patrimonial con blindaje <span class="text-xs text-slate-400">(Protección de vida/invalidez)</span></span>
+          </div>
+          <span class="text-[10px] font-semibold px-2 py-1 bg-amber-100 text-amber-700 rounded-md">Blindaje</span>
+        </label>
+      </div>
+
+      <!-- SECCIÓN 3: PASIVOS / DEUDAS (AL FONDO CON NÚMERO 3) -->
+      <div class="space-y-4 pt-2">
+        <div class="flex items-center gap-2">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-700 text-xs font-bold">3</span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-red-600">Pasivos y Fugas Financieras</h3>
         </div>
 
+        <label class="flex items-center justify-between p-4 rounded-xl border border-red-100 hover:border-red-200 cursor-pointer transition-all bg-red-50/20">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-deuda-hipoteca" class="diag-chk w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
+            <span class="text-sm font-medium text-slate-700">🏠 Crédito Hipotecario Activo</span>
+          </div>
+          <span class="text-[10px] font-semibold px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-md">Pasivo a Largo Plazo</span>
+        </label>
+
+        <label class="flex items-center justify-between p-4 rounded-xl border border-red-100 hover:border-red-200 cursor-pointer transition-all bg-red-50/20">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-deuda-auto" class="diag-chk w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
+            <span class="text-sm font-medium text-slate-700">🚗 Crédito Automotriz</span>
+          </div>
+          <span class="text-[10px] font-semibold px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-md">Estructura Fija</span>
+        </label>
+
+        <label class="flex items-center justify-between p-4 rounded-xl border border-red-100 hover:border-red-200 cursor-pointer transition-all bg-red-50/20">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="chk-deuda-tc" class="diag-chk w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
+            <span class="text-sm font-medium text-slate-700">💳 Tarjetas de Crédito / Saldo Revolvente</span>
+          </div>
+          <span class="text-[10px] font-semibold px-2.5 py-1 bg-red-100 text-red-700 border border-red-200 rounded-md">Fuga por Interés</span>
+        </label>
       </div>
 
     </div>
 
-    <!-- COLUMNA DERECHA: Aquí viven las Recomendaciones y los Botones de Conversión -->
-    <div class="lg:col-span-6 space-y-6">
-      
-      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
-
-        <!-- Contenedor Dinámico de Ineficiencias Estratégicas -->
-        <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl space-y-2.5">
-          <span class="text-[10px] font-bold text-amber-800 uppercase tracking-wider block">⚠️ Ineficiencias y Brechas Detectadas</span>
-          <ul id="lista-ineficiencias" class="text-[11px] text-slate-700 space-y-2"></ul>
-        </div>
-
-        <!-- Estrategias Recomendadas -->
-        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-4">
-          <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider block border-b border-slate-200 pb-2">
-            🎯 Hoja de Ruta Estratégica Sugerida
-          </span>
-          <div id="lista-soluciones" class="space-y-2.5 text-[11px]"></div>
-        </div>
-
-        <!-- SECCIÓN DE CONVERSIÓN DUAL -->
-        <div class="pt-2 space-y-3">
-          <span class="text-[11px] font-semibold text-slate-700 block text-center">
-            ¿Cómo deseas proceder con tu dictamen preliminar?
-          </span>
-
-          <!-- OPCIÓN A: CITA CON CONSULTOR -->
-          <button onclick="agendarConsultoria()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-4 rounded-xl transition text-xs shadow-sm uppercase tracking-wide flex items-center justify-center gap-2">
-            <span>📅 Agendar Consultoría Personalizada</span>
-          </button>
-
-          <!-- OPCIÓN B: EXPLORAR APP -->
-          <button onclick="explorarPlataforma()" class="w-full bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 font-semibold py-3.5 px-4 rounded-xl transition text-xs uppercase tracking-wide flex flex-col items-center justify-center gap-0.5">
-            <div class="flex items-center gap-1.5">
-              <span>📱 Explorar Simulaciones de Forma Autónoma</span>
-              <span class="text-[10px] text-emerald-600 font-normal">→</span>
-            </div>
-            <span class="text-[9px] text-slate-500 font-normal lowercase first-letter:uppercase">Sin llamadas ni compromisos • Acceso inmediato</span>
-          </button>
-        </div>
-
+    <!-- RESULTADOS DINÁMICOS: INEFICIENCIAS Y SOLUCIONES -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Fugas e Ineficiencias Detectadas</h4>
+        <ul id="lista-ineficiencias" class="space-y-2 text-xs text-slate-600">
+          <!-- Inyectado por JS -->
+        </ul>
       </div>
 
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Soluciones Sugeridas</h4>
+        <div id="lista-soluciones" class="space-y-2 text-xs text-slate-600">
+          <!-- Inyectado por JS -->
+        </div>
+      </div>
     </div>
 
   </main>
 
+  <!-- SCRIPT DE EVALUACIÓN Y LÓGICA -->
   <script>
     function reevaluarDiagnostico() {
       const chkBanco = document.getElementById('chk-banco').checked;
@@ -246,59 +205,74 @@
       ulIneficiencias.innerHTML = '';
       divSoluciones.innerHTML = '';
 
-      let score = 40;
-
-      if (chkNeobanco) score += 10;
-      if (chkCetes) score += 12;
-      if (chkDeducible) score += 12;
-      if (chkExento) score += 10;
-      if (chkPatrimonial) score += 12;
-
-      if (chkBanco) score -= 10;
-      if (chkDeudaHipoteca) score -= 10;
-      if (chkDeudaAuto) score -= 10;
-      if (chkDeudaTc) score -= 18;
-
-      if (score < 10) score = 10;
-      if (score > 88) score = 88;
-
       const nadaSeleccionado = !chkBanco && !chkNeobanco && !chkCetes && !chkDeudaHipoteca && !chkDeudaAuto && !chkDeudaTc && !chkDeducible && !chkExento && !chkPatrimonial;
-      if (nadaSeleccionado) score = 10;
-
-      scorePorcentaje.innerText = score + '%';
-      barraProgreso.style.width = score + '%';
-
-      let mensajesSubtexto = [];
-
-      if (chkBanco && !chkNeobanco && !chkCetes) {
-        mensajesSubtexto.push("Tus reservas de capital en banco tradicional pierden poder adquisitivo frente a la inflación.");
-      } else {
-        mensajesSubtexto.push("Tu estructura muestra avances, pero aún existen brechas de eficiencia fiscal y diversificación no exploradas.");
-      }
-
-      if (score <= 35 || chkDeudaTc) {
-        contenedorSemaforo.className = "p-4 rounded-xl border bg-red-50 border-red-200 space-y-3";
+      
+      if (nadaSeleccionado) {
+        let score = 10;
+        scorePorcentaje.innerText = score + '%';
+        barraProgreso.style.width = score + '%';
+        contenedorSemaforo.className = "p-5 rounded-2xl border shadow-lg backdrop-blur-md space-y-4 transition-all duration-300 bg-red-50/95 border-red-200";
         badgeColor.className = "w-3 h-3 rounded-full bg-red-500 animate-ping";
         textoEstado.innerText = "Estructura Vulnerable: Fuga de Capital";
         textoEstado.className = "text-xs font-bold uppercase tracking-wider text-red-700";
         barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-red-500";
-        subtextoSemaforo.innerText = "Prioridad crítica: " + mensajesSubtexto.join(" ");
-      } else {
-        contenedorSemaforo.className = "p-4 rounded-xl border bg-amber-50 border-amber-200 space-y-3";
-        badgeColor.className = "w-3 h-3 rounded-full bg-amber-500 animate-ping";
-        textoEstado.innerText = "Estructura Optimizable: Margen de Mejora Disponible";
-        textoEstado.className = "text-xs font-bold uppercase tracking-wider text-amber-700";
-        barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-amber-500";
-        subtextoSemaforo.innerText = "Buen nivel base, pero tu estrategia actual no está blindada al 100%. Siempre hay áreas finas de mejora fiscal y diversificación avanzada por calibrar en nuestra plataforma.";
-      }
-
-      if (nadaSeleccionado) {
+        subtextoSemaforo.innerText = "Atención crítica: Tu esquema actual presenta vulnerabilidades importantes frente a la inflación y costos financieros elevados.";
+        
         ulIneficiencias.innerHTML = `<li class="flex items-start gap-2 text-amber-800"><span>⚠️</span><div>Sin estrategia activa seleccionada. El capital se encuentra expuesto.</div></li>`;
         divSoluciones.innerHTML = `<div><p class="font-bold text-emerald-700">🌱 Diseño de Plan de Acumulación Inicial</p><p class="text-slate-500 text-[10px]">Apertura de un fondo base protegido contra la inflación.</p></div>`;
         return;
       }
 
-      if (chkBanco) {
+      // Arrancamos desde 0 estricto (la suma de todo lo positivo da exactamente 89%)
+      let score = 0; 
+
+      // Ponderaciones exactas solicitadas
+      if (chkBanco) score += 12;
+      if (chkNeobanco) score += 15;
+      if (chkCetes) score += 14;
+      if (chkDeducible) score += 14;      // PPR (Art. 151)
+      if (chkExento) score += 17;         // LISR (Art. 93)
+      if (chkPatrimonial) score += 17;    // Plan patrimonial
+
+      // Penalizaciones por pasivos solicitadas
+      if (chkDeudaHipoteca) score -= 15;
+      if (chkDeudaAuto) score -= 20;
+      if (chkDeudaTc) score -= 20; 
+
+      // Límites de seguridad (Piso 10%, Techo estricto 89%)
+      if (score < 10) score = 10;
+      if (score > 89) score = 89;
+
+      scorePorcentaje.innerText = score + '%';
+      barraProgreso.style.width = score + '%';
+
+      // Limpiamos clases previas del contenedor
+      contenedorSemaforo.className = "p-5 rounded-2xl border shadow-lg backdrop-blur-md space-y-4 transition-all duration-300";
+
+      if (score >= 70) {
+        contenedorSemaforo.classList.add("bg-emerald-50/95", "border-emerald-200");
+        badgeColor.className = "w-3 h-3 rounded-full bg-emerald-500 animate-ping";
+        textoEstado.innerText = "Estructura Saludable y Eficiente";
+        textoEstado.className = "text-xs font-bold uppercase tracking-wider text-emerald-700";
+        barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-emerald-500";
+        subtextoSemaforo.innerText = "¡Excelente arquitectura patrimonial! Tu estrategia cuenta con bases sólidas de acumulación, blindaje y optimización fiscal.";
+      } else if (score >= 40 && score < 70) {
+        contenedorSemaforo.classList.add("bg-amber-50/95", "border-amber-200");
+        badgeColor.className = "w-3 h-3 rounded-full bg-amber-500 animate-ping";
+        textoEstado.innerText = "Estructura en Optimización";
+        textoEstado.className = "text-xs font-bold uppercase tracking-wider text-amber-700";
+        barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-amber-500";
+        subtextoSemaforo.innerText = "Tienes una estrategia con bases, pero detectamos algunos pasivos o áreas de fricción que restan eficiencia a tu rendimiento neto.";
+      } else {
+        contenedorSemaforo.classList.add("bg-red-50/95", "border-red-200");
+        badgeColor.className = "w-3 h-3 rounded-full bg-red-500 animate-ping";
+        textoEstado.innerText = "Estructura Vulnerable: Fuga de Capital";
+        textoEstado.className = "text-xs font-bold uppercase tracking-wider text-red-700";
+        barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-red-500";
+        subtextoSemaforo.innerText = "Atención crítica: Tu esquema actual presenta vulnerabilidades importantes frente a la inflación y costos financieros elevados.";
+      }
+
+      if (chkBanco && !chkCetes) {
         ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">📊</span><div><strong>Capital en Banco Tradicional:</strong> Exposición a erosión por inflación sin rendimiento óptimo.</div></li>`;
       }
       if (chkNeobanco) {
@@ -310,11 +284,11 @@
         divSoluciones.innerHTML += `<div><p class="font-bold text-amber-700">💡 Estrategia de Pagos Adelantados / Mejora de Tasa</p><p class="text-slate-500 text-[10px]">Evaluación de portabilidad o aportaciones a capital para reducir intereses totales.</p></div>`;
       }
       if (chkDeudaTc) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-red-600">🚨</span><div><strong>Interés Revolvente Favorable al Banco:</strong> Alto costo por financiación no estructurada.</div></li>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2 text-red-700 bg-red-50/50 p-2 rounded-lg border border-red-100"><span>🚨</span><div><strong>Interés Revolvente Favorable al Banco:</strong> Alto costo por financiación no estructurada que erosiona tu rendimiento.</div></li>`;
         divSoluciones.innerHTML += `<div><p class="font-bold text-red-700">⚡ Estrategia de Consolidación / Amortización Acelerada</p><p class="text-slate-500 text-[10px]">Plan para reducir el costo financiero de la deuda.</p></div>`;
       }
       if (chkDeudaAuto) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🚗</span><div><strong>Pasivo a Plazo Fijo:</strong> Compromiso mensual que limita la capacidad de acumulación.</div></li>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🚗</span><div><strong>Pasivo Automotriz:</strong> Financiamiento con tasa fija que demanda flujo constante.</div></li>`;
       }
       if (!chkDeducible) {
         ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🏛️</span><div><strong>Incentivo Fiscal No Aprovechado:</strong> Sin estrategia deducible activa (ej. PPR).</div></li>`;
@@ -337,19 +311,8 @@
       localStorage.setItem('expediente_diagnostico', JSON.stringify(estadoActual));
     }
 
-    function agendarConsultoria() {
-      const expediente = localStorage.getItem('expediente_diagnostico');
-      const urlCalendly = "https://calendly.com/tu-link-de-agenda?diagnostico=" + encodeURIComponent(expediente);
-      window.open(urlCalendly, '_blank');
-    }
-
-    function explorarPlataforma() {
-      window.location.href = "https://tuapp.com/descargar?origen=web_diagnostico";
-    }
-
     document.querySelectorAll('.diag-chk').forEach(chk => chk.addEventListener('change', reevaluarDiagnostico));
     window.onload = reevaluarDiagnostico;
   </script>
 </body>
-
 </html>
