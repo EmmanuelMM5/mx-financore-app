@@ -14,30 +14,36 @@
     <div class="space-y-2">
       <div class="flex justify-between items-center text-[10px] font-mono text-slate-400 uppercase">
         <span>Paso 1 de 1: Calibración Financiera</span>
-        <span class="text-emerald-400 font-bold">~45 segundos</span>
+        <span class="text-emerald-400 font-bold">~15 segundos</span>
       </div>
       <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden border border-slate-800">
-        <div class="bg-emerald-500 h-full w-3/4 rounded-full"></div>
+        <div class="bg-emerald-500 h-full w-full rounded-full"></div>
       </div>
       <h1 class="text-lg font-extrabold text-white tracking-tight pt-1">Personaliza tus Simuladores</h1>
       <p class="text-xs text-slate-400">
-        Ingresa tus datos base aproximados para calcular tus deducciones del SAT y proyecciones de retiro con precisión.
+        Ingresa tus datos base para calibrar tus deducciones del SAT y proyecciones fiscales con precisión inicial.
       </p>
     </div>
 
     <!-- TARJETA DEL FORMULARIO DE CALIBRACIÓN -->
     <form onsubmit="guardarYContinuar(event)" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 shadow-2xl">
 
-      <!-- BLOQUE 1: DATOS FISCALES BASE -->
-      <div class="space-y-3 border-b border-slate-800 pb-4">
+      <!-- BLOQUE ÚNICO: PERFIL FISCAL & EDAD -->
+      <div class="space-y-3 pb-2">
         <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider block font-mono">
-          1. Perfil Fiscal & Edad
+          Configuración Base
         </span>
 
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block text-[10px] text-slate-300 font-medium mb-1">Edad Actual</label>
-            <input type="number" id="calib-edad" required value="34" min="18" max="75" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500 transition">
+            <label class="block text-[10px] text-slate-300 font-medium mb-1">Rango de Edad</label>
+            <select id="calib-edad" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+              <option value="25">25 a 29 años</option>
+              <option value="32" selected>30 a 35 años</option>
+              <option value="38">36 a 42 años</option>
+              <option value="45">43 a 50 años</option>
+              <option value="55">Más de 50 años</option>
+            </select>
           </div>
 
           <div>
@@ -52,38 +58,14 @@
 
         <div>
           <label class="block text-[10px] text-slate-300 font-medium mb-1">Ingreso Mensual Neto Aproximado</label>
-          <div class="relative">
-            <span class="absolute left-3 top-2.5 text-slate-500 font-mono text-xs">$</span>
-            <input type="text" id="calib-ingreso" required value="75,000" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-7 pr-12 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500 transition">
-            <span class="absolute right-3 top-2.5 text-slate-500 font-mono text-[10px]">MXN</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BLOQUE 2: LIQUIDEZ Y PASIVOS TOTALES -->
-      <div class="space-y-3 border-b border-slate-800 pb-4">
-        <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block font-mono">
-          2. Capacidad & Deudas Globales
-        </span>
-
-        <div>
-          <label class="block text-[10px] text-slate-300 font-medium mb-1">Dinero Ahorrado / Invertido Actualmente</label>
-          <div class="relative">
-            <span class="absolute left-3 top-2.5 text-slate-500 font-mono text-xs">$</span>
-            <input type="text" id="calib-ahorro" placeholder="Ej. 150,000" value="300,000" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-7 pr-12 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500 transition">
-            <span class="absolute right-3 top-2.5 text-slate-500 font-mono text-[10px]">MXN</span>
-          </div>
-          <span class="text-[9px] text-slate-500 block mt-0.5">Suma de cuentas de débito, Cetes, Sofipos o brokers.</span>
-        </div>
-
-        <div>
-          <label class="block text-[10px] text-slate-300 font-medium mb-1">Pago Mensual Total de Deudas (Auto / Hipoteca / TC)</label>
-          <div class="relative">
-            <span class="absolute left-3 top-2.5 text-slate-500 font-mono text-xs">$</span>
-            <input type="text" id="calib-deuda-mensual" placeholder="Ej. 12,000" value="29,700" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-7 pr-12 py-2 text-xs text-white font-mono focus:outline-none focus:border-emerald-500 transition">
-            <span class="absolute right-3 top-2.5 text-slate-500 font-mono text-[10px]">MXN</span>
-          </div>
-          <span class="text-[9px] text-slate-500 block mt-0.5">Suma aproximada de lo que destinas a créditos cada mes.</span>
+          <select id="calib-ingreso" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 transition font-mono">
+            <option value="20000">Menos de $25,000 MXN</option>
+            <option value="32500">$25,000 a $40,000 MXN</option>
+            <option value="55000">$40,000 a $70,000 MXN</option>
+            <option value="90000" selected>$70,000 a $110,000 MXN</option>
+            <option value="150000">$110,000 a $200,000 MXN</option>
+            <option value="250000">Más de $200,000 MXN</option>
+          </select>
         </div>
       </div>
 
@@ -94,7 +76,7 @@
       </button>
 
       <p class="text-[9px] text-slate-500 text-center font-mono">
-        🔒 Puedes modificar estos montos en cualquier momento dentro de tus calculadoras.
+        🔒 Podrás actualizar o completar detalles financieros avanzados en cualquier momento desde tu panel.
       </p>
 
     </form>
@@ -108,13 +90,11 @@
       const perfilCalibrado = {
         edad: document.getElementById('calib-edad').value,
         regimen: document.getElementById('calib-regimen').value,
-        ingresoMensual: document.getElementById('calib-ingreso').value,
-        ahorroTotal: document.getElementById('calib-ahorro').value,
-        pagoDeudaMensual: document.getElementById('calib-deuda-mensual').value,
+        ingresoMensual: Number(document.getElementById('calib-ingreso').value),
         fechaCalibracion: new Date().toISOString()
       };
 
-      // Guarda la calibración cuantitativa en el almacenamiento local / backend
+      // Guarda solo los datos esenciales en el almacenamiento local
       localStorage.setItem('perfil_calibrado_usuario', JSON.stringify(perfilCalibrado));
 
       // Redirige al Dashboard interactivo
