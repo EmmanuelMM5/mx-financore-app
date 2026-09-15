@@ -11,7 +11,7 @@
 
   <main class="max-w-2xl mx-auto space-y-6">
 
-    <!-- HEADER DE MARCA: MX FinanCore (Ubicado en la parte más alta) -->
+    <!-- HEADER DE MARCA: MX FinanCore -->
     <header class="flex items-center justify-between px-2">
       <div class="flex items-center gap-2.5">
         <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-sm shadow-sm">
@@ -22,7 +22,7 @@
           <span class="block text-[10px] font-medium uppercase tracking-wider text-slate-400">Arquitectura Patrimonial</span>
         </div>
       </div>
-      <span class="text-[10px] font-semibold px-2.5 py-1 bg-slate-200/70 text-slate-600 rounded-full">v1.0 Pro</span>
+      <span class="text-[10px] font-semibold px-2.5 py-1 bg-slate-200/70 text-slate-600 rounded-full">v2.4 Pro</span>
     </header>
     
     <!-- TARJETA DEL SEMÁFORO / SCORE (FIJA / STICKY DURANTE EL SCROLL) -->
@@ -54,23 +54,24 @@
           <h2 class="text-lg font-bold text-slate-900">Dictamen Preliminar</h2>
           <!-- SELLO DE CONFIANZA Y TRANSPARENCIA -->
           <p class="text-xs text-slate-500 flex items-center gap-1.5 mt-1">
-            <span>🔒</span> Calcula tu salud financiera en segundos. Tus respuestas son confidenciales y seguras.
+            <span>🔒</span> Descubre cómo anda tu dinero en 1 minuto. 100% confidencial, sin llamadas molestas.
           </p>
         </div>
+        <span class="self-start sm:self-auto text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-600 rounded-lg">Matriz</span>
       </div>
 
       <!-- SECCIÓN 1: ACUMULACIÓN Y LIQUIDEZ -->
       <div class="space-y-4">
         <div class="flex items-center gap-2">
           <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">1</span>
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Estrategia Actual de Acumulación y Liquidez</h3>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">¿Cómo guardas y mueves tu dinero hoy?</h3>
         </div>
 
         <!-- Opción Banco (Marcada por defecto) -->
         <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all bg-slate-50/50">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-banco" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500" checked>
-            <span class="text-sm font-medium text-slate-700">🏦 Capital Estancado en Banco Tradicional / Débito</span>
+            <span class="text-sm font-medium text-slate-700">🏦 Lo tengo en mi cuenta de débito de toda la vida</span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-slate-200 text-slate-600 rounded-md">Sin Rendimiento</span>
         </label>
@@ -79,7 +80,7 @@
         <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-neobanco" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-            <span class="text-sm font-medium text-slate-700">📱 Capital en Neobancos / Sofipos (ej. Nu, Klar, Stori)</span>
+            <span class="text-sm font-medium text-slate-700">📱 Lo muevo en apps o Sofipos (ej. Nu, Klar, Stori)</span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-purple-100 text-purple-700 rounded-md">Tasa Fija</span>
         </label>
@@ -88,7 +89,7 @@
         <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-cetes" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-            <span class="text-sm font-medium text-slate-700">📈 Portafolio de Inversión Activo (Cetes / Bolsa / Fondos)</span>
+            <span class="text-sm font-medium text-slate-700">📈 Invierto activamente (Cetes, fondos o bolsa)</span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-emerald-100 text-emerald-700 rounded-md">Protección Inflación</span>
         </label>
@@ -98,13 +99,13 @@
       <div class="space-y-4 pt-2">
         <div class="flex items-center gap-2">
           <span class="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">2</span>
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Estrategia Fiscal SAT & Blindaje Patrimonial</h3>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Impuestos y protección para el futuro</h3>
         </div>
 
         <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-deducible" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-            <span class="text-sm font-medium text-slate-700">1. Estrategia de inversión deducible <span class="text-xs text-slate-400">(ej. PPR Art. 151)</span></span>
+            <span class="text-sm font-medium text-slate-700">1. Ahorro para el retiro deducible de impuestos <span class="text-xs text-slate-400">(PPR)</span></span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-blue-100 text-blue-700 rounded-md">Deducción SAT</span>
         </label>
@@ -112,7 +113,7 @@
         <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-exento" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-            <span class="text-sm font-medium text-slate-700">2. Estrategia exenta de impuestos <span class="text-xs text-slate-400">(ej. Art. 93 LISR)</span></span>
+            <span class="text-sm font-medium text-slate-700">2. Inversiones con ganancias libres de impuestos</span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-emerald-100 text-emerald-700 rounded-md">Exención LISR</span>
         </label>
@@ -120,23 +121,23 @@
         <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-patrimonial" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-            <span class="text-sm font-medium text-slate-700">3. Plan patrimonial con blindaje <span class="text-xs text-slate-400">(Protección de vida/invalidez)</span></span>
+            <span class="text-sm font-medium text-slate-700">3. Seguro de vida o protección ante imprevistos graves</span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-amber-100 text-amber-700 rounded-md">Blindaje</span>
         </label>
       </div>
 
-      <!-- SECCIÓN 3: PASIVOS / DEUDAS (AL FONDO CON NÚMERO 3) -->
+      <!-- SECCIÓN 3: PASIVOS / DEUDAS -->
       <div class="space-y-4 pt-2">
         <div class="flex items-center gap-2">
           <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-700 text-xs font-bold">3</span>
-          <h3 class="text-xs font-bold uppercase tracking-wider text-red-600">Pasivos y Fugas Financieras</h3>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-red-600">Deudas y fugas de dinero actuales</h3>
         </div>
 
         <label class="flex items-center justify-between p-4 rounded-xl border border-red-100 hover:border-red-200 cursor-pointer transition-all bg-red-50/20">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-deuda-hipoteca" class="diag-chk w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
-            <span class="text-sm font-medium text-slate-700">🏠 Crédito Hipotecario Activo</span>
+            <span class="text-sm font-medium text-slate-700">🏠 Pago una hipoteca o crédito de casa</span>
           </div>
           <span class="text-[10px] font-semibold px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-md">Pasivo a Largo Plazo</span>
         </label>
@@ -144,7 +145,7 @@
         <label class="flex items-center justify-between p-4 rounded-xl border border-red-100 hover:border-red-200 cursor-pointer transition-all bg-red-50/20">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-deuda-auto" class="diag-chk w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
-            <span class="text-sm font-medium text-slate-700">🚗 Crédito Automotriz</span>
+            <span class="text-sm font-medium text-slate-700">🚗 Pago un crédito de auto</span>
           </div>
           <span class="text-[10px] font-semibold px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-md">Estructura Fija</span>
         </label>
@@ -152,7 +153,7 @@
         <label class="flex items-center justify-between p-4 rounded-xl border border-red-100 hover:border-red-200 cursor-pointer transition-all bg-red-50/20">
           <div class="flex items-center gap-3">
             <input type="checkbox" id="chk-deuda-tc" class="diag-chk w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
-            <span class="text-sm font-medium text-slate-700">💳 Tarjetas de Crédito / Saldo Revolvente</span>
+            <span class="text-sm font-medium text-slate-700">💳 Uso tarjeta de crédito y suelo arrastrar saldo</span>
           </div>
           <span class="text-[10px] font-semibold px-2.5 py-1 bg-red-100 text-red-700 border border-red-200 rounded-md">Fuga por Interés</span>
         </label>
@@ -174,6 +175,24 @@
         <div id="lista-soluciones" class="space-y-2 text-xs text-slate-600">
           <!-- Inyectado por JS -->
         </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN FINAL DE CONVERSIÓN (CTA CON BOTÓN ULTRA CORTO) -->
+    <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-800 space-y-5 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="space-y-2">
+        <h3 class="text-lg sm:text-xl font-bold tracking-tight">🎯 Lleva tus finanzas al siguiente nivel, paso a paso.</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-lg">
+          Crea tu cuenta gratuita en MX FinanCore. Desbloquea rutas interactivas para sanar tus deudas, poner a trabajar tu dinero y acceder a estrategias de blindaje y retiro a tu propio ritmo.
+        </p>
+      </div>
+      <div class="w-full sm:w-auto shrink-0">
+        <a id="btn-registro-plataforma" href="/signup" class="w-full sm:w-auto px-6 py-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all flex items-center justify-center gap-2 text-sm">
+          <span>🚀</span> Empieza HOY
+        </a>
+        <p class="text-xs text-slate-400 text-center mt-2">
+          ✓ Ruta paso a paso &nbsp;•&nbsp; ✓ Sin rodeos ni enredos &nbsp;•&nbsp; ✓ Asesoría experta cuando estés listo
+        </p>
       </div>
     </div>
 
@@ -218,8 +237,10 @@
         barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-red-500";
         subtextoSemaforo.innerText = "Atención crítica: Tu esquema actual presenta vulnerabilidades importantes frente a la inflación y costos financieros elevados.";
         
-        ulIneficiencias.innerHTML = `<li class="flex items-start gap-2 text-amber-800"><span>⚠️</span><div>Sin estrategia activa seleccionada. El capital se encuentra expuesto.</div></li>`;
-        divSoluciones.innerHTML = `<div><p class="font-bold text-emerald-700">🌱 Diseño de Plan de Acumulación Inicial</p><p class="text-slate-500 text-[10px]">Apertura de un fondo base protegido contra la inflación.</p></div>`;
+        ulIneficiencias.innerHTML = `<li class="flex items-start gap-2 text-amber-800"><span>⚠️</span><div>No tienes ninguna estrategia activa seleccionada. Tu dinero actual se encuentra completamente expuesto.</div></li>`;
+        divSoluciones.innerHTML = `<div><p class="font-bold text-emerald-700">🌱 Diseña tu plan de crecimiento inicial</p><p class="text-slate-500 text-[10px]">Crea una estrategia a tu medida para blindar tu dinero frente a la inflación y empezar a crecer.</p></div>`;
+        
+        actualizarEnlaceRegistro(score, {chkBanco, chkNeobanco, chkCetes, chkDeudaHipoteca, chkDeudaAuto, chkDeudaTc, chkDeducible, chkExento, chkPatrimonial});
         return;
       }
 
@@ -273,42 +294,51 @@
       }
 
       if (chkBanco && !chkCetes) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">📊</span><div><strong>Capital en Banco Tradicional:</strong> Exposición a erosión por inflación sin rendimiento óptimo.</div></li>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>📊</span><div><strong>Dinero en cuenta tradicional:</strong> Tu dinero se está devaluando poco a poco debido a la inflación al no generar rendimientos.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-blue-700">Pon a trabajar tu dinero</p><p class="text-slate-500 text-[10px]">Descubre cómo migrar tu capital estancado a portafolios eficientes que sí le ganan a la inflación.</p></div>`;
       }
       if (chkNeobanco) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-purple-600">📱</span><div><strong>Concentración en Neobancos / Sofipos:</strong> Requiere monitoreo de límites de exención (PROSOFIPO) y tasa variable.</div></li>`;
-        divSoluciones.innerHTML += `<div><p class="font-bold text-purple-700">📱 Calibración de Sofipos & Tasas Fijas</p><p class="text-slate-500 text-[10px]">Estrategia para diversificar saldos por debajo de los topes exentos.</p></div>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>📱</span><div><strong>Dinero en Apps o Sofipos:</strong> Es una gran opción, pero recuerda cuidar los topes de protección (PROSOFIPO) y vigilar cambios de tasa.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-purple-700">Estrategia inteligente en Apps</p><p class="text-slate-500 text-[10px]">Diversifica tus saldos inteligentemente para mantener rendimientos atractivos sin cruzar límites fiscales.</p></div>`;
       }
       if (chkDeudaHipoteca) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🏠</span><div><strong>Crédito Hipotecario Activo:</strong> Compromiso a largo plazo que impacta el flujo de efectivo mensual.</div></li>`;
-        divSoluciones.innerHTML += `<div><p class="font-bold text-amber-700">💡 Estrategia de Pagos Adelantados / Mejora de Tasa</p><p class="text-slate-500 text-[10px]">Evaluación de portabilidad o aportaciones a capital para reducir intereses totales.</p></div>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>🏠</span><div><strong>Hipoteca activa:</strong> Tienes un compromiso fuerte a largo plazo que absorbe una parte importante de tus ingresos mensuales.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-amber-700">Optimiza tu crédito hipotecario</p><p class="text-slate-500 text-[10px]">Analicemos opciones de pagos anticipados o mejora de condiciones para recortar años de deuda.</p></div>`;
       }
       if (chkDeudaTc) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2 text-red-700 bg-red-50/50 p-2 rounded-lg border border-red-100"><span>🚨</span><div><strong>Interés Revolvente Favorable al Banco:</strong> Alto costo por financiación no estructurada que erosiona tu rendimiento.</div></li>`;
-        divSoluciones.innerHTML += `<div><p class="font-bold text-red-700">⚡ Estrategia de Consolidación / Amortización Acelerada</p><p class="text-slate-500 text-[10px]">Plan para reducir el costo financiero de la deuda.</p></div>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2 text-red-700 bg-red-50/50 p-2 rounded-lg border border-red-100"><span>🚨</span><div><strong>Fuga por intereses de tarjeta:</strong> Arrastrar saldo revolvente te está generando un costo altísimo que destruye tus ahorros.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-red-700">Rescate de saldos revolventes</p><p class="text-slate-500 text-[10px]">Frena la fuga de intereses altos con un plan de consolidación diseñado para recuperar tu tranquilidad.</p></div>`;
       }
       if (chkDeudaAuto) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🚗</span><div><strong>Pasivo Automotriz:</strong> Financiamiento con tasa fija que demanda flujo constante.</div></li>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>🚗</span><div><strong>Crédito de auto:</strong> Tienes una mensualidad fija que te exige mantener un flujo de efectivo constante cada mes.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-amber-700">Radiografía de pasivos fijos</p><p class="text-slate-500 text-[10px]">Estrategias de flujo de efectivo para equilibrar tus mensualidades y acelerar tus metas de ahorro.</p></div>`;
       }
       if (!chkDeducible) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🏛️</span><div><strong>Incentivo Fiscal No Aprovechado:</strong> Sin estrategia deducible activa (ej. PPR).</div></li>`;
-        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">💎 Estrategia Deducible de Impuestos</p><p class="text-slate-500 text-[10px]">Implementación de esquemas bajo el Art. 151 LISR para reembolso anual.</p></div>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>🏛️</span><div><strong>Impuestos sin optimizar:</strong> Estás dejando ir la oportunidad de deducir impuestos cada año (como con un PPR).</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">Haz que el SAT te devuelva dinero</p><p class="text-slate-500 text-[10px]">Abre un Plan Personal de Retiro para blindar tu futuro y acumular un reembolso importante cada año.</p></div>`;
       } else {
-        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">💎 Refinamiento de Deducciones SAT</p><p class="text-slate-500 text-[10px]">Ajuste de aportaciones para maximizar topes deducibles anuales sin rebasar límites de ley.</p></div>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">Refinamiento de Deducciones SAT</p><p class="text-slate-500 text-[10px]">Ajuste de aportaciones para maximizar topes deducibles anuales sin rebasar límites de ley.</p></div>`;
       }
       if (!chkExento) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">📑</span><div><strong>Rendimientos Gravados:</strong> Sin instrumentos de inversión exentos de impuestos.</div></li>`;
-        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">✨ Estrategia Exenta de Impuestos</p><p class="text-slate-500 text-[10px]">Uso de planes personales exentos bajo el Art. 93 LISR.</p></div>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>📑</span><div><strong>Impuestos en tus ganancias:</strong> Tus inversiones actuales generan rendimientos que pagan impuestos; podrías exentarlos legalmente.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">Inversiones 100% libres de impuestos</p><p class="text-slate-500 text-[10px]">Conoce los esquemas legales de ahorro donde tus ganancias crecen sin que Hacienda se lleve una parte.</p></div>`;
       }
       if (!chkPatrimonial) {
-        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span class="text-amber-600">🛡️</span><div><strong>Estructura Vulnerable:</strong> Sin plan patrimonial blindado ante imprevistos graves.</div></li>`;
-        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">🛡️ Plan Patrimonial con Blindaje</p><p class="text-slate-500 text-[10px]">Protección por invalidez y fallecimiento para garantizar metas a largo plazo.</p></div>`;
+        ulIneficiencias.innerHTML += `<li class="flex items-start gap-2"><span>🛡️</span><div><strong>Protección familiar pendiente:</strong> Falta un plan de respaldo o seguro que proteja tu patrimonio ante imprevistos graves.</div></li>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">Blindaje total para ti y tu familia</p><p class="text-slate-500 text-[10px]">Diseña un respaldo financiero sólido que proteja tu estilo de vida ante cualquier imprevisto grave.</p></div>`;
       } else {
-        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">🛡️ Auditoría de Coberturas de Blindaje</p><p class="text-slate-500 text-[10px]">Revisión de sumas aseguradas vs. inflación y actualización de beneficiarios.</p></div>`;
+        divSoluciones.innerHTML += `<div><p class="font-bold text-emerald-700">Auditoría de Coberturas de Blindaje</p><p class="text-slate-500 text-[10px]">Revisión de sumas aseguradas vs. inflación y actualización de beneficiarios.</p></div>`;
       }
 
       const estadoActual = {score, chkBanco, chkNeobanco, chkCetes, chkDeudaHipoteca, chkDeudaAuto, chkDeudaTc, chkDeducible, chkExento, chkPatrimonial};
       localStorage.setItem('expediente_diagnostico', JSON.stringify(estadoActual));
+      actualizarEnlaceRegistro(score, estadoActual);
+    }
+
+    function actualizarEnlaceRegistro(score, estado) {
+      const btnRegistro = document.getElementById('btn-registro-plataforma');
+      const payload = encodeURIComponent(JSON.stringify(estado));
+      btnRegistro.href = `/signup?data=${payload}`;
     }
 
     document.querySelectorAll('.diag-chk').forEach(chk => chk.addEventListener('change', reevaluarDiagnostico));
