@@ -25,36 +25,38 @@
       <span class="text-[10px] font-semibold px-2.5 py-1 bg-slate-200/70 text-slate-600 rounded-full">v2.4 Pro</span>
     </header>
     
-    <!-- TARJETA DEL SEMÁFORO / SCORE (FIJA / STICKY DURANTE EL SCROLL) -->
+    <!-- TARJETA DEL SEMÁFORO / SCORE (ESTADO NEUTRO INICIAL ACTUALIZADO / STICKY) -->
     <div class="sticky top-4 z-50">
-      <div id="contenedor-semaforo" class="p-5 rounded-2xl border shadow-lg backdrop-blur-md bg-red-50/95 border-red-200 space-y-4 transition-all duration-300">
+      <div id="contenedor-semaforo" class="p-5 rounded-2xl border shadow-lg backdrop-blur-md bg-white/95 border-slate-200 space-y-4 transition-all duration-300">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <span id="badge-color-semaforo" class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
-            <span id="texto-estado-semaforo" class="text-xs font-bold uppercase tracking-wider text-red-700">Estructura Vulnerable: Fuga de Capital</span>
+            <span id="badge-color-semaforo" class="w-3 h-3 rounded-full bg-slate-400"></span>
+            <span id="texto-estado-semaforo" class="text-xs font-bold uppercase tracking-wider text-slate-600">🎯 ¿Tu dinero crece o se está perdiendo?</span>
           </div>
-          <span id="score-porcentaje" class="text-2xl font-black text-slate-800">12%</span>
+          <span id="score-porcentaje" class="text-sm sm:text-base font-bold text-slate-400 flex items-center gap-1">
+            <span>⚡</span> <span class="text-xs tracking-wide uppercase font-semibold">Interactúa</span>
+          </span>
         </div>
 
         <!-- Barra de Progreso -->
         <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
-          <div id="barra-progreso" class="h-full transition-all duration-500 rounded-full bg-red-500" style="width: 12%;"></div>
+          <div id="barra-progreso" class="h-full transition-all duration-500 rounded-full bg-slate-300" style="width: 0%;"></div>
         </div>
 
         <p id="subtexto-semaforo" class="text-xs text-slate-600 leading-relaxed">
-          Atención crítica: Tu esquema actual presenta vulnerabilidades importantes frente a la inflación y costos financieros elevados.
+          ⚡ 1 minuto para ver el estado real de tus finanzas y desbloquear tu siguiente nivel.
         </p>
       </div>
     </div>
 
-    <!-- DICTAMEN PRELIMINAR (FORMULARIO DE OPCIONES) -->
+    <!-- DICTAMEN PRELIMINAR (FORMULARIO DE OPCIONES ACTUALIZADO) -->
     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-4 gap-2">
         <div>
-          <h2 class="text-lg font-bold text-slate-900">Dictamen Preliminar</h2>
-          <!-- SELLO DE CONFIANZA Y TRANSPARENCIA -->
+          <h2 class="text-lg font-bold text-slate-900">Conócete y evalúa tu cartera</h2>
+          <!-- SELLO DE CONFIANZA Y TRANSPARENCIA ACTUALIZADO -->
           <p class="text-xs text-slate-500 flex items-center gap-1.5 mt-1">
-            <span>🔒</span> Descubre cómo anda tu dinero en 1 minuto. 100% confidencial, sin llamadas molestas.
+            <span>🔒</span> Selecciona tus opciones abajo y descubre el estado real de tu dinero en 1 minuto.
           </p>
         </div>
         <span class="self-start sm:self-auto text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-600 rounded-lg">Matriz</span>
@@ -67,10 +69,10 @@
           <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">¿Cómo guardas y mueves tu dinero hoy?</h3>
         </div>
 
-        <!-- Opción Banco (Marcada por defecto) -->
-        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all bg-slate-50/50">
+        <!-- Opción Banco -->
+        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-slate-300 cursor-pointer transition-all">
           <div class="flex items-center gap-3">
-            <input type="checkbox" id="chk-banco" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500" checked>
+            <input type="checkbox" id="chk-banco" class="diag-chk w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
             <span class="text-sm font-medium text-slate-700">🏦 Lo tengo en mi cuenta de débito de toda la vida</span>
           </div>
           <span class="text-[10px] font-semibold px-2 py-1 bg-slate-200 text-slate-600 rounded-md">Sin Rendimiento</span>
@@ -166,19 +168,19 @@
       <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
         <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Fugas e Ineficiencias Detectadas</h4>
         <ul id="lista-ineficiencias" class="space-y-2 text-xs text-slate-600">
-          <!-- Inyectado por JS -->
+          <li class="text-slate-400 italic">Selecciona opciones para ver los detalles aquí.</li>
         </ul>
       </div>
 
       <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
         <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Soluciones Sugeridas</h4>
         <div id="lista-soluciones" class="space-y-2 text-xs text-slate-600">
-          <!-- Inyectado por JS -->
+          <p class="text-slate-400 italic">Aquí aparecerán tus recomendaciones personalizadas.</p>
         </div>
       </div>
     </div>
 
-    <!-- SECCIÓN FINAL DE CONVERSIÓN (MOBILE FIRST: TÍTULO ARRIBA, BOTÓN Y GARANTÍAS DEBAJO) -->
+    <!-- SECCIÓN FINAL DE CONVERSIÓN (MOBILE FIRST) -->
     <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-800 space-y-6 text-center">
       <div class="space-y-2 max-w-xl mx-auto">
         <h3 class="text-lg sm:text-xl font-bold tracking-tight">🎯 Lleva tus finanzas al siguiente nivel, paso a paso.</h3>
@@ -226,48 +228,46 @@
 
       const nadaSeleccionado = !chkBanco && !chkNeobanco && !chkCetes && !chkDeudaHipoteca && !chkDeudaAuto && !chkDeudaTc && !chkDeducible && !chkExento && !chkPatrimonial;
       
+      // ESTADO NEUTRO INICIAL ACTUALIZADO (DEFINITIVO)
       if (nadaSeleccionado) {
-        let score = 10;
-        scorePorcentaje.innerText = score + '%';
-        barraProgreso.style.width = score + '%';
-        contenedorSemaforo.className = "p-5 rounded-2xl border shadow-lg backdrop-blur-md space-y-4 transition-all duration-300 bg-red-50/95 border-red-200";
-        badgeColor.className = "w-3 h-3 rounded-full bg-red-500 animate-ping";
-        textoEstado.innerText = "Estructura Vulnerable: Fuga de Capital";
-        textoEstado.className = "text-xs font-bold uppercase tracking-wider text-red-700";
-        barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-red-500";
-        subtextoSemaforo.innerText = "Atención crítica: Tu esquema actual presenta vulnerabilidades importantes frente a la inflación y costos financieros elevados.";
+        scorePorcentaje.innerHTML = `<span>⚡</span> <span class="text-xs tracking-wide uppercase font-semibold">Interactúa</span>`;
+        scorePorcentaje.className = "text-sm sm:text-base font-bold text-slate-400 flex items-center gap-1";
+        barraProgreso.style.width = '0%';
+        contenedorSemaforo.className = "p-5 rounded-2xl border shadow-lg backdrop-blur-md space-y-4 transition-all duration-300 bg-white/95 border-slate-200";
+        badgeColor.className = "w-3 h-3 rounded-full bg-slate-400";
+        textoEstado.innerText = "🎯 ¿Tu dinero crece o se está perdiendo?";
+        textoEstado.className = "text-xs font-bold uppercase tracking-wider text-slate-600";
+        barraProgreso.className = "h-full transition-all duration-500 rounded-full bg-slate-300";
+        subtextoSemaforo.innerText = "⚡ 1 minuto para ver el estado real de tus finanzas y desbloquear tu siguiente nivel.";
         
-        ulIneficiencias.innerHTML = `<li class="flex items-start gap-2 text-amber-800"><span>⚠️</span><div>No tienes ninguna estrategia activa seleccionada. Tu dinero actual se encuentra completamente expuesto.</div></li>`;
-        divSoluciones.innerHTML = `<div><p class="font-bold text-emerald-700">🌱 Diseña tu plan de crecimiento inicial</p><p class="text-slate-500 text-[10px]">Crea una estrategia a tu medida para blindar tu dinero frente a la inflación y empezar a crecer.</p></div>`;
+        ulIneficiencias.innerHTML = `<li class="text-slate-400 italic">Selecciona opciones para ver los detalles aquí.</li>`;
+        divSoluciones.innerHTML = `<p class="text-slate-400 italic">Aquí aparecerán tus recomendaciones personalizadas.</p>`;
         
-        actualizarEnlaceRegistro(score, {chkBanco, chkNeobanco, chkCetes, chkDeudaHipoteca, chkDeudaAuto, chkDeudaTc, chkDeducible, chkExento, chkPatrimonial});
+        actualizarEnlaceRegistro(0, {chkBanco, chkNeobanco, chkCetes, chkDeudaHipoteca, chkDeudaAuto, chkDeudaTc, chkDeducible, chkExento, chkPatrimonial});
         return;
       }
 
-      // Arrancamos desde 0 estricto (la suma de todo lo positivo da exactamente 89%)
+      // Cálculo de score si hay interacción
       let score = 0; 
 
-      // Ponderaciones exactas solicitadas
       if (chkBanco) score += 12;
       if (chkNeobanco) score += 15;
       if (chkCetes) score += 14;
-      if (chkDeducible) score += 14;      // PPR (Art. 151)
-      if (chkExento) score += 17;         // LISR (Art. 93)
-      if (chkPatrimonial) score += 17;    // Plan patrimonial
+      if (chkDeducible) score += 14;      
+      if (chkExento) score += 17;         
+      if (chkPatrimonial) score += 17;    
 
-      // Penalizaciones por pasivos solicitadas
       if (chkDeudaHipoteca) score -= 15;
       if (chkDeudaAuto) score -= 20;
       if (chkDeudaTc) score -= 20; 
 
-      // Límites de seguridad (Piso 10%, Techo estricto 89%)
       if (score < 10) score = 10;
       if (score > 89) score = 89;
 
       scorePorcentaje.innerText = score + '%';
+      scorePorcentaje.className = "text-2xl font-black text-slate-800";
       barraProgreso.style.width = score + '%';
 
-      // Limpiamos clases previas del contenedor
       contenedorSemaforo.className = "p-5 rounded-2xl border shadow-lg backdrop-blur-md space-y-4 transition-all duration-300";
 
       if (score >= 70) {
